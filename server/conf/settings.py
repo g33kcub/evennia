@@ -42,3 +42,29 @@ try:
     from server.conf.secret_settings import *
 except ImportError:
     print("secret_settings.py file not found or failed to import.")
+
+######################################################################
+# Guest accounts
+######################################################################
+
+# This enables guest logins, by default via "connect guest". Note that
+# you need to edit your login screen to inform about this possibility.
+GUEST_ENABLED = True
+# Typeclass for guest account objects (linked to a character)
+BASE_GUEST_TYPECLASS = "typeclasses.accounts.Guest"
+# The permission given to guests
+PERMISSION_GUEST_DEFAULT = "Guests"
+# The default home location used for guests.
+GUEST_HOME = DEFAULT_HOME
+# The start position used for guest characters.
+GUEST_START_LOCATION = START_LOCATION
+# The naming convention used for creating new guest
+# accounts/characters. The size of this list also determines how many
+# guests may be on the game at once. The default is a maximum of nine
+# guests, named Guest1 through Guest9.
+GUEST_LIST = ["Guest" + str(s + 1) for s in range(9)]
+
+# Help output from CmdHelp are wrapped in an EvMore call
+# (excluding webclient with separate help popups). If continuous scroll
+# is preferred, change 'HELP_MORE' to False. EvMORE uses CLIENT_DEFAULT_HEIGHT
+HELP_MORE = False
