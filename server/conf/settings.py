@@ -74,7 +74,7 @@ HELP_MORE = False
 # lock functions, which accepts both plural and singular (Admin & Admins)
 PERMISSION_HIERARCHY = [
     "Guest",  # note-only used if GUEST_ENABLED=True
-    "Newbie"
+    "Newbie",
     "Player",
     "Helper",
     "Builder",
