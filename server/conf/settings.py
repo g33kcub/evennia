@@ -68,3 +68,18 @@ GUEST_LIST = ["Guest" + str(s + 1) for s in range(9)]
 # (excluding webclient with separate help popups). If continuous scroll
 # is preferred, change 'HELP_MORE' to False. EvMORE uses CLIENT_DEFAULT_HEIGHT
 HELP_MORE = False
+
+# The access hierarchy, in climbing order. A higher permission in the
+# hierarchy includes access of all levels below it. Used by the perm()/pperm()
+# lock functions, which accepts both plural and singular (Admin & Admins)
+PERMISSION_HIERARCHY = [
+    "Guest",  # note-only used if GUEST_ENABLED=True
+    "Newbie"
+    "Player",
+    "Helper",
+    "Builder",
+    "Admin",
+    "Developer",
+]
+# The default permission given to all new accounts
+PERMISSION_ACCOUNT_DEFAULT = "Newbie"
