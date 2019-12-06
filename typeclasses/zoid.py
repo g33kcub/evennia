@@ -1,4 +1,5 @@
 from evennia import DefaultObject
+from commands.zoidcmds.zoidcmd import CmdSetZoid
 
 class Zoid(DefaultObject):
     """
@@ -8,5 +9,4 @@ class Zoid(DefaultObject):
         """
         This is called only when object is first created.
         """
-        pass
-    
+        self.cmdset.add_default(CmdSetZoid)
