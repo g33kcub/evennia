@@ -13,8 +13,8 @@ class CmdBoardZoid(Command):
     locks = "cmd:all()"
 
     def func(self):
-        self.caller.msg("You enter the cockpit of " + self.name + ".")
-        self.caller.move_to(self.name)
+        self.caller.msg("You enter the cockpit of " + self.name/key + ".")
+        self.caller.move_to(self.name/key)
 
 class CmdDisembarkZoid(Command):
     """
