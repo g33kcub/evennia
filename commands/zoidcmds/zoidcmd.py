@@ -34,6 +34,6 @@ class CmdDisembarkZoid(Command):
         self.caller.move_to(parent)
 
 class CmdSetZoid(CmdSet):
-    self.add(CmdDisembarkZoid())
-    self.add(CmdBoardZoid())
-    
+    def at_cmdset_creation(self):
+        self.add(CmdDisembarkZoid())
+        self.add(CmdBoardZoid())
