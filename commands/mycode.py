@@ -1,0 +1,2 @@
+from evennia import Command
+
