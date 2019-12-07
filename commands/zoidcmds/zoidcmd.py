@@ -14,7 +14,7 @@ class CmdBoardZoid(Command):
 
     def func(self):
         target = self.caller.search(self.args)
-        zoid = target.obj
+        zoid = target
         parent = zoid.location
         self.caller.msg("You enter the cockpit of " + zoid.name + ".")
         self.caller.move_to(zoid)
