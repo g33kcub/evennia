@@ -30,5 +30,12 @@ class Character(DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
-
-    pass
+    def at_object_creation(self):
+        stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
+        self.db.stats = {
+            "earth": stat_dict,
+            "fire": stat_dict,
+            "air": stat_dict,
+            "water": stat_dict,
+            "void": stat_dict
+        }

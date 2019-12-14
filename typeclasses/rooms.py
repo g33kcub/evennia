@@ -6,6 +6,7 @@ Rooms are simple containers that has no location of their own.
 """
 
 from evennia import DefaultRoom
+from world.utilities import wrap
 import time
 
 class Room(DefaultRoom):
@@ -44,8 +45,9 @@ class Room(DefaultRoom):
         """
         Settings to be applied when a new room is dug.
         """
-        self.tags.remove("OOC")
-        self.db.ic = 0
+
+        self.db.ic = False
+        self.db.type = "outside"
     
     def make_header(self, string):
         """
@@ -104,14 +106,17 @@ class Room(DefaultRoom):
                 things[con].append(con)
         
         # handle room title
-        string = "|540Out of Character - |w" if not self.db.ic else "|540Out of Character - |w" 
+        string = "|540In Character - |w" if self.db.ic else "|540Out of Character - |w" 
         string +=  self.get_display_name(looker) + "|n\n"
         string += ("|113=|n" * 78 ) + "\n"
 
+
         # Description
-        string += "You See Nothing Special\n" if not self.db.desc else self.db.desc + "\n"
+        string += "You See Nothing Special\n" if not self.db.desc else wrap(self.db.desc) + "\n"
         # Secondary Description
-        if self.db.sec_desc: string += "\n%s\n" % self.db.sec_desc
+        if self.db.sec_desc: string += wrap("\n%s\n" % self.db.sec_desc)
+
+        #format the desc strings to 78 characters.
 
         # Character section    
         string += self.make_header("Characters")
