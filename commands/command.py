@@ -34,6 +34,34 @@ class Command(BaseCommand):
     pass
 
 
+class Cmd_Short_Desc(Command):
+    """
+    Allows a character to set their short description
+
+    Usage:
+        +shortdesc [<desc>]
+    
+    This sets the short description on your character, used
+    several places within the game.
+    """
+
+    key = "+shortdesc"
+    help_Category = "general"
+
+    def func(self):
+        "this performs the actual command"
+        if not self.args:
+            del self.caller.db.short_desc
+            self.caller.msg("Your short description has been reset.")
+            return
+        try:
+            short_desc = self.args
+        except ValueError:
+            self.caller.msg(errmsg)
+            return
+        self.caller.db.short_desc = short_desc
+        self.caller.msg("Your short description has been set.")
+
 # -------------------------------------------------------------
 #
 # The default commands inherit from

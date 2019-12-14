@@ -57,6 +57,28 @@ class Room(DefaultRoom):
         return "|113[|w " + string + " |113]|n" + "|113-|n" * length + "\n"
 
 
+    def detail_string(self, target, looker):
+        "Shows the details of the individual room description rows"
+
+        if target.has_account:
+            
+            # denote if a super user or not.
+            if target.is_superuser:
+                name =  "|540*|n " + target.get_display_name(looker)  
+            else:
+                name = target.get_display_name(looker)
+
+            output = name[:22] + "..." if len(name) > 30 else name.ljust(30)
+            
+            short_desc = target.db.short_desc
+            if short_desc: 
+                output += (short_desc[:41] + "...") if len(short_desc) > 45  else short_desc.ljust(40) 
+            else: 
+                output += "use |w+shortdesc <desc>|n to set this message.".ljust(45)
+            session = target.account.sessions.get()[0]
+            output += "%s\n".rjust(10) % self.display_time(time.time() - session.cmd_last_visible)
+            return output
+
     def return_appearance(self, looker):
         """
         The return from this method is what the looker sees when
@@ -73,29 +95,17 @@ class Room(DefaultRoom):
             else: 
                 things[con].append(con)
         
-        if not self.db.ic:
-            string = "|540Out of Character - |w" + self.get_display_name(looker) + "|n\n"
-        else:
-            string = "|540In Character - |w" + self.get_display_name(looker) + "|n\n"
-        
+        # handle room title
+        string = "|540Out of Character - |w" if not self.db.ic else "|540Out of Character - |w" 
+        string +=  self.get_display_name(looker) + "|n\n"
         string += ("|113=|n" * 78 ) + "\n"
 
-        if self.db.desc:
-            string += self.db.desc + "\n"
+        # Description
+        string += "You See Nothing Special\n" if not self.db.desc else self.db.desc + "\n"
         
         # Character section    
         string += self.make_header("Characters")
-        for user in users:
-            
-            name =  "|540*|n " + user.get_display_name(looker) if (user.is_superuser ) else user.get_display_name(looker)
-            string += name[:22] + "..." if len(name) > 30 else name.ljust(30)
-            short_desc = user.db.short_desc
-            if short_desc: 
-                string += (short_desc[:41] + "...") if len(short_desc) > 45  else short_desc.ljust(40) 
-            else: 
-                string += "use |w+shortdesc <desc>|n to set this".ljust(45)
-            session = con.account.sessions.get()[0]
-            string += "%s\n".rjust(14) % self.display_time(time.time() - session.cmd_last_visible)
+        for user in users: string += self.detail_string(user, looker)
 
         string += ("|113=|n" * 78 ) 
         return string
