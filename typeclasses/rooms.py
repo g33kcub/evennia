@@ -28,14 +28,14 @@ class Room(DefaultRoom):
         day = 60 * 60 * 24
         output = ""
         HOUR = N // hour
-        MINUT = (N - (HOUR * hour)) // min
-        SECONDS = N - ((HOUR * hour) + (MINUT * min))
+        MINUTE = (N - (HOUR * hour)) // min
+        SECONDS = N - ((HOUR * hour) + (MINUTE * min))
 
         if HOUR:
             output += "%sh " % HOUR
         
-        if MINUT:
-            output += "%sm " % MINUT
+        if MINUTE:
+            output += "%sm " % MINUTE
         
         if seconds:
             output +=  "%ss" % SECONDS
