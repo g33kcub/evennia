@@ -28,3 +28,10 @@ lock functions from evennia.locks.lockfuncs.
 #    """
 #    print "%s tried to access %s. Access denied." % (accessing_obj, accessed_obj)
 #    return False
+def isguest(accessing_obj,accessed_obj, *args, **kwargs)
+    """
+    a called lockstring with no args.
+    This lock function will check if the caller is a guest or Helper+
+    """
+    return False
+    
