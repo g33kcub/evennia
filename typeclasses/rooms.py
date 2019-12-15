@@ -39,7 +39,7 @@ class Room(DefaultRoom):
         min = 60
         hour = 60 * 60
         day = 60 * 60 * 24
-        output = ""
+        output = "" 
         HOUR = N // hour
         MINUTE = (N - (HOUR * hour)) // min
         SECONDS = N - ((HOUR * hour) + (MINUTE * min))
