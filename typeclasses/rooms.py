@@ -7,6 +7,7 @@ Rooms are simple containers that has no location of their own.
 
 from evennia import DefaultRoom
 import time
+from world.utilities import columns
 
 class Room(DefaultRoom):
     """
@@ -98,7 +99,11 @@ class Room(DefaultRoom):
             return output
         elif target.destination:
             alias = "%s" % target.aliases
-            alias = alias.split(",")[0]
+            alias = alias.split(",")
+            try:
+                alias = alias.sort(key=len)[0]
+            except TypeError:
+                alias = alias[0]
             alias = "[%s]" % alias
             return alias.upper() + " " * (6 - len(alias)) + target.get_display_name(looker) + "\n" 
 
@@ -125,9 +130,9 @@ class Room(DefaultRoom):
 
 
         # Description
-        string += "You See Nothing Special\n" if not self.db.desc else self.wrap(self.db.desc) + "\n"
+        string += "You See Nothing Special\n" if not self.db.desc else self.wrap(self.db.desc) + "\n\n"
         # Secondary Description
-        if self.db.sec_desc: string += self.wrap("\n%s\n" % self.db.sec_desc)
+        if self.db.sec_desc: string += self.wrap("\n%s\n" % self.db.sec_desc) + "\n\n"
 
         #format the desc strings to 78 characters.
 
@@ -137,12 +142,17 @@ class Room(DefaultRoom):
 
         # Exits
         if exitsi:
+            exits = "|".join(map(lambda x: self.detail_string(x, looker), exitsi))
+            
             string += self.make_header("Buildings & Residences") 
-            for exit in exitsi: string += self.detail_string(exit, looker)
+            string += columns(exits, sep="|") + "\n"
         
         if exitso:
-            string += self.make_header("Streets & Pathways") 
-            for exit in exitso: string += self.detail_string(exit, looker)
+            exits = "|".join(map(lambda x: self.detail_string(x, looker), exitso))
+            
+            string += self.make_header("Buildings & Residences") 
+            string += columns(exits, sep="|") + "\n"
+
         # Ending line
         string += ("|113=|n" * 78 ) 
         return string
