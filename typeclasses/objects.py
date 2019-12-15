@@ -11,6 +11,7 @@ inheritance.
 
 """
 from evennia import DefaultObject
+from typeclasses.monsters import Monster
 
 
 class Object(DefaultObject):

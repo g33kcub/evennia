@@ -8,6 +8,7 @@ creation commands.
 
 """
 from evennia import DefaultCharacter
+from typeclasses.npcs import NPC
 
 
 class Character(DefaultCharacter):
@@ -32,6 +33,7 @@ class Character(DefaultCharacter):
     """
     def at_object_creation(self):
         stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
+        skill_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False }
         self.db.stats = {
             "earth": stat_dict,
             "fire": stat_dict,
@@ -41,15 +43,24 @@ class Character(DefaultCharacter):
         }
 
         self.db.skills = {
-            "swords": stat_dict,
-            "knives": stat_dict,
-            "hammers" : stat_dict,
-            "whips": stat_dict,
-            "spears": stat_dict,
-            "staves": stat_dict,
-            "axes": stat_dict,
-            "bows": stat_dict,
-            "fans": stat_dict,
-            "rods": stat_dict,
-            "wands": stat_dict
+            "swords": skill_dict,
+            "knives": skill_dict,
+            "hammers" : skill_dict,
+            "whips": skill_dict,
+            "spears": skill_dict,
+            "staves": skill_dict,
+            "axes": skill_dict,
+            "bows": skill_dict,
+            "fans": skill_dict,
+            "rods": skill_dict,
+            "wands": skill_dict,
+            "persuasion": skill_dict,
+            "haggling": skill_dict,
+            "intimidation": skill_dict,
+            "empathy": skill_dict,
+            "subterfuge":skill_dict,
+            "leadership": skill_dict,
+            "command": skill_dict,
+            "socialize": skill_dict,
+            "etiquette": skill_dict
         }

@@ -6,7 +6,10 @@ in the game world.
 
 """
 
-from evennia import DefaultObject
+from  evennia import DefaultCharacter
 
-class NPC(DefaultObject):
+class NPC(DefaultCharacter):
+    """
+    The basic NPC.
+    """
 pass 
