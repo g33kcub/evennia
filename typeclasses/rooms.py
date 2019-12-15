@@ -6,7 +6,6 @@ Rooms are simple containers that has no location of their own.
 """
 
 from evennia import DefaultRoom
-from world.utilities.utils import wrap
 import time
 
 class Room(DefaultRoom):
@@ -19,6 +18,20 @@ class Room(DefaultRoom):
     See examples/object.py for a list of
     properties and methods available on all Objects.
     """ 
+
+    def wrap(self, string="", width=78):
+        str_list = string.split()
+        
+        output = ""
+        line = ""
+        for w in str_list:
+            if len(w + line) > width:
+                output += ("\n%s" % line).lstrip()
+                line = "%s " % w
+            else:
+                line += "%s " % w
+        output +=  " " + line + "\n"
+        return output
 
     def display_time(self, seconds):
         N = int(seconds)
@@ -112,9 +125,9 @@ class Room(DefaultRoom):
 
 
         # Description
-        string += "You See Nothing Special\n" if not self.db.desc else wrap(self.db.desc) + "\n"
+        string += "You See Nothing Special\n" if not self.db.desc else self.wrap(self.db.desc) + "\n"
         # Secondary Description
-        if self.db.sec_desc: string += wrap("\n%s\n" % self.db.sec_desc)
+        if self.db.sec_desc: string += self.wrap("\n%s\n" % self.db.sec_desc)
 
         #format the desc strings to 78 characters.
 
