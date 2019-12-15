@@ -25,12 +25,12 @@ class Room(DefaultRoom):
         output = ""
         line = ""
         for w in str_list:
-            if len(w + line) > width:
+            if len(w + line) >= width:
                 output += ("\n%s" % line).lstrip()
                 line = "%s " % w
             else:
                 line += "%s " % w
-        output +=  " " + line + "\n"
+        output +=  " " + line
         return output
 
     def display_time(self, seconds):
