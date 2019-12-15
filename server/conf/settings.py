@@ -73,6 +73,7 @@ HELP_MORE = False
 # hierarchy includes access of all levels below it. Used by the perm()/pperm()
 # lock functions, which accepts both plural and singular (Admin & Admins)
 PERMISSION_HIERARCHY = [
+    "Guest",  # note-only used if GUEST_ENABLED=True
     "Newbie",
     "Player",
     "Helper",
