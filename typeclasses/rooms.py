@@ -6,7 +6,7 @@ Rooms are simple containers that has no location of their own.
 """
 
 from evennia import DefaultRoom
-from world.utilities import wrap
+from world.utilities.utils import wrap
 import time
 
 class Room(DefaultRoom):
