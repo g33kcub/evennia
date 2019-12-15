@@ -53,7 +53,7 @@ GUEST_ENABLED = True
 # Typeclass for guest account objects (linked to a character)
 BASE_GUEST_TYPECLASS = "typeclasses.accounts.Guest"
 # The permission given to guests
-PERMISSION_GUEST_DEFAULT = "Guests"
+PERMISSION_GUEST_DEFAULT = "Guest"
 # The default home location used for guests.
 GUEST_HOME = DEFAULT_HOME
 # The start position used for guest characters.
