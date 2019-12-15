@@ -79,7 +79,7 @@ PERMISSION_HIERARCHY = [
     "Builder",
     "Staff",
     "Admin",
-    "Developer",
+    "Developer"
 ]
 # The default permission given to all new accounts
 PERMISSION_ACCOUNT_DEFAULT = "Newbie"
