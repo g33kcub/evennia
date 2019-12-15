@@ -26,7 +26,7 @@ class Room(DefaultRoom):
         line = ""
         for w in str_list:
             if len(w + line) >= width:
-                output += ("\n%s" % line).lstrip()
+                output += ("%s\n" % line).lstrip()
                 line = "%s " % w
             else:
                 line += "%s " % w
