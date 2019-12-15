@@ -31,9 +31,18 @@ class Character(DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
+    """
+    0 = General
+    1 = Weapon
+    2 = Social
+    3 = Crafting
+    4 = Tradesman
+    """
     def at_object_creation(self):
         stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
-        skill_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False }
+        skill_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 0 }
+        skill_dict_weapon = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 1 }
+        skill_dict_social = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 2 }
         self.db.stats = {
             "earth": stat_dict,
             "fire": stat_dict,
@@ -43,24 +52,24 @@ class Character(DefaultCharacter):
         }
 
         self.db.skills = {
-            "swords": skill_dict,
-            "knives": skill_dict,
-            "hammers" : skill_dict,
+            "swords": skill_dict_weapon,
+            "knives": skill_dict_weapon,
+            "hammers" : skill_dict_weapon,
             "whips": skill_dict,
-            "spears": skill_dict,
-            "staves": skill_dict,
-            "axes": skill_dict,
-            "bows": skill_dict,
-            "fans": skill_dict,
-            "rods": skill_dict,
-            "wands": skill_dict,
-            "persuasion": skill_dict,
-            "haggling": skill_dict,
-            "intimidation": skill_dict,
-            "empathy": skill_dict,
-            "subterfuge":skill_dict,
-            "leadership": skill_dict,
-            "command": skill_dict,
-            "socialize": skill_dict,
-            "etiquette": skill_dict
+            "spears": skill_dict_weapon,
+            "staves": skill_dict_weapon,
+            "axes": skill_dict_weapon,
+            "bows": skill_dict_weapon,
+            "fans": skill_dict_weapon,
+            "rods": skill_dict_weapon,
+            "wands": skill_dict_weapon,
+            "persuasion": skill_dict_social,
+            "haggling": skill_dict_social,
+            "intimidation": skill_dict_social,
+            "empathy": skill_dict_social,
+            "subterfuge":skill_dict_social,
+            "leadership": skill_dict_social,
+            "command": skill_dict_social,
+            "socialize": skill_dict_social,
+            "etiquette": skill_dict_social
         }
