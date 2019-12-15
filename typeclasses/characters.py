@@ -39,3 +39,17 @@ class Character(DefaultCharacter):
             "water": stat_dict,
             "void": stat_dict
         }
+
+        self.db.skills = {
+            "swords": stat_dict,
+            "knives": stat_dict,
+            "hammers" : stat_dict,
+            "whips": stat_dict,
+            "spears": stat_dict,
+            "staves": stat_dict,
+            "axes": stat_dict,
+            "bows": stat_dict,
+            "fans": stat_dict,
+            "rods": stat_dict,
+            "wands": stat_dict
+        }
