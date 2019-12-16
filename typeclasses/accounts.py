@@ -91,7 +91,10 @@ class Account(DefaultAccount):
      at_server_shutdown()
 
     """
-    pass
+    def at_account_creation(self):
+        self.db.mails = []
+        self.db.readmails = set()
+        self.add(mail.CmdMail())
 
 
 class Guest(DefaultGuest):
