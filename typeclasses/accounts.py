@@ -91,11 +91,7 @@ class Account(DefaultAccount):
      at_server_shutdown()
 
     """
-    at_object_creation(self):
-    """
-    Adding in stuff.
-    """
-    self.add(mail.CmdMail())
+    pass
 
 
 class Guest(DefaultGuest):
