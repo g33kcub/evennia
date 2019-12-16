@@ -8,10 +8,11 @@ creation commands.
 
 """
 from evennia import DefaultCharacter
+from evennia.contrib.rpsystem import ContribRPCharacter
 from typeclasses.npcs import NPC
 
 
-class Character(DefaultCharacter):
+class Character(ContribRPCharacter):
     """
     The Character defaults to reimplementing some of base Object's hook methods with the
     following functionality:
@@ -48,6 +49,8 @@ class Character(DefaultCharacter):
     5 = Chef
     """
     def at_object_creation(self):
+
+        super().at_object_creation()
         stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
         stat_dict_magic = {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": 0}
         skill_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 0 }

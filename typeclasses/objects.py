@@ -12,9 +12,10 @@ inheritance.
 """
 from evennia import DefaultObject
 from typeclasses.monsters import Monster
+from evennia.contrib.rpsystem import ContribRPObject
 
 
-class Object(DefaultObject):
+class Object(ContribRPObject):
     """
     This is the root typeclass object, implementing an in-game Evennia
     game object, such as having a location, being able to be
