@@ -1,7 +1,7 @@
 """
 This is the universal stat dictionary.
 """
-def stat_dict():
+
     lang_dict = {"rank": 0, "lxp": 0, "lxpl": 0, "cor": 0}
     ability_dict = {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False}
     stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }

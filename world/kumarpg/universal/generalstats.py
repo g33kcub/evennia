@@ -1,5 +1,5 @@
 from evennia import DefaultCharacter
-from world.kumarpg.dict import stat_dict
+import world.kumarpg.dict
 """
 This is the stat file for universal stats.
 """
