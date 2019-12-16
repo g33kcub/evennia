@@ -10,6 +10,7 @@ creation commands.
 from evennia import DefaultCharacter
 from evennia.contrib.rpsystem import ContribRPCharacter
 from typeclasses.npcs import NPC
+from world.kumarpg.statdb import character_stats
 
 
 class Character(ContribRPCharacter):
@@ -32,23 +33,8 @@ class Character(ContribRPCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
-    """
-    Skill Types
-    0 = General
-    1 = Weapon
-    2 = Social
-    3 = Crafting
-    4 = Tradesman
-
-    Crafting Skill Types:
-    0 = None
-    1 = Smithing
-    2 = Tailoring
-    3 = Production
-    4 = Scholary
-    5 = Chef
-    """
     def at_object_creation(self):
+<<<<<<< HEAD
 
         super().at_object_creation()
         stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
@@ -112,13 +98,7 @@ class Character(ContribRPCharacter):
             "appraisal":skill_dict_tradesman,
             "research":skill_dict_tradesman
         }
+=======
+        character_stats(self)
+>>>>>>> 1977244767762d9d871948b55cb6e2517136fa88
 
-        self.db.magic = {
-            "pyro": stat_dict_magic,
-            "aqua": stat_dict_magic,
-            "aero": stat_dict_magic,
-            "terra": stat_dict_magic,
-            "cure": stat_dict_magic,
-            "shield": stat_dict_magic,
-            "esuna": stat_dict_magic
-        }
