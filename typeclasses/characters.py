@@ -9,7 +9,7 @@ creation commands.
 """
 from evennia import DefaultCharacter
 from typeclasses.npcs import NPC
-from world.kumarpg import stat_dict
+from world.kumarpg.dict import stat_dict
 from world.kumarpg.universal import universal_stats
 from world.kumarpg.universal import universal_demographics
 from world.kumarpg.dungeon1 import dungeon1_stats
