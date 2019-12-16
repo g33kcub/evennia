@@ -18,7 +18,7 @@ def dungeon1_stats(character):
     skill_dict_crafting4 = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 3, "group": 4 }
     skill_dict_crafting5 = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 3, "group": 5 }
     skill_dict_tradesman = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 4 }
-    character.db.d1.stats = {
+    character.db.d1_stats = {
       "earth": stat_dict,
       "fire": stat_dict,
       "air": stat_dict,
@@ -26,7 +26,7 @@ def dungeon1_stats(character):
       "void": stat_dict
     }
 
-    character.db.d1.skills = {
+    character.db.d1_skills = {
         "swords": skill_dict_weapon,
         "knives": skill_dict_weapon,
         "hammers" : skill_dict_weapon,
@@ -40,7 +40,7 @@ def dungeon1_stats(character):
         "wands": skill_dict_weapon
     }
 
-    character.db.d1.magic = {
+    character.db.d1_magic = {
         "firebolt": magic_dict,
         "will-o-wisp": magic_dict,
         "aquabolt": magic_dict,
@@ -98,7 +98,7 @@ def dungeon1_stats(character):
         "shimmer": magic_dict,
     }
 
-    character.db.d1.abilities = {
+    character.db.d1_abilities = {
         "flight": ability_dict,
         "night sight": ability_dict,
         "adaptive": ability_dict,
