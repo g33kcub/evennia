@@ -25,7 +25,7 @@ from evennia import utils
 
 CONNECTION_SCREEN = """|113==============================================================================|n
                        Welcome to |113{}|n!
-                                      |b{}|n
+                              |145{}|n
   If you have an existing account, connect to it by typing:
       |wconnect <username> <password>|n
   To join the game, create a new account by typing:
