@@ -25,7 +25,7 @@ from evennia import utils
 
 CONNECTION_SCREEN = """|113==============================================================================|n
                        Welcome to |113{}|n!
-
+                                      |b{}|n
   If you have an existing account, connect to it by typing:
       |wconnect <username> <password>|n
   To join the game, create a new account by typing:
@@ -40,5 +40,5 @@ CONNECTION_SCREEN = """|113=====================================================
         If you have spaces in your username, enclose it in quotes.
      Enter |whelp|n for more info. |wlook|n will re-show this screen.
 |113==============================================================================|n""".format(
-     settings.SERVERNAME,utils.get_evennia_version("short"),settings.KUMAVERS
+     settings.SERVERNAME,settings.GAME_SLOGAN,utils.get_evennia_version("short"),settings.KUMAVERS
 )

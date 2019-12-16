@@ -84,3 +84,22 @@ PERMISSION_HIERARCHY = [
 ]
 # The default permission given to all new accounts
 PERMISSION_ACCOUNT_DEFAULT = "Newbie"
+TIME_ZONE = "EST"
+GAME_SLOGAN = "Chapter 1: Into the Darkness"
+
+
+# The Evennia Game Index is a dynamic listing of Evennia games. You can add your game
+# to this list also if it is in closed pre-alpha development.
+GAME_INDEX_ENABLED = True
+# This dict
+GAME_INDEX_LISTING = {
+    "game_name": SERVERNAME,
+    "game_status": "pre-alpha",  # pre-alpha, alpha, beta or launched
+    "short_description": GAME_SLOGAN,
+    "long_description": "We are an isekai anime themed game with mud aspects and social roleplay aspects.",
+    "listing_contact": "g33kcub@gmail.com",  # email
+    "telnet_hostname": "",  # mygame.com
+    "telnet_port": "",  # 1234
+    "game_website": "",  # http://mygame.com
+    "web_client_url": "",  # http://mygame.com/webclient
+}

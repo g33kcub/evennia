@@ -144,7 +144,7 @@ class CmdMail(default_cmds.MuxAccountCommand):
 
         """
         for recipient in recipients:
-            recipient.msg("You have received a new @mail from %s" % caller)
+            recipient.msg("You have received a new @mail from |g%s|n" % caller)
             new_message = create.create_message(
                 self.caller, message, receivers=recipient, header=subject
             )
