@@ -8,12 +8,11 @@ creation commands.
 
 """
 from evennia import DefaultCharacter
-from evennia.contrib.rpsystem import ContribRPCharacter
 from typeclasses.npcs import NPC
 from world.kumarpg.statdb import character_stats
 
 
-class Character(ContribRPCharacter):
+class Character(DefaultCharacter):
     """
     The Character defaults to reimplementing some of base Object's hook methods with the
     following functionality:
@@ -36,3 +35,4 @@ class Character(ContribRPCharacter):
     def at_object_creation(self):
         character_stats(self)
 
+    
