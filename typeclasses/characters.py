@@ -49,6 +49,7 @@ class Character(DefaultCharacter):
     """
     def at_object_creation(self):
         stat_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0 }
+        stat_dict_magic = {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": 0}
         skill_dict = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 0 }
         skill_dict_weapon = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 1 }
         skill_dict_social = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 2 }
@@ -107,4 +108,14 @@ class Character(DefaultCharacter):
             "culinarian":skill_dict_crafting5,
             "appraisal":skill_dict_tradesman,
             "research":skill_dict_tradesman
+        }
+
+        self.db.magic {
+            "pyro": stat_dict_magic,
+            "aqua": stat_dict_magic,
+            "aero": stat_dict_magic,
+            "terra": stat_dict_magic,
+            "cure": stat_dict_magic,
+            "shield": stat_dict_magic,
+            "esuna": stat_dict_magic,
         }
