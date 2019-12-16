@@ -28,6 +28,8 @@ def character_demographics(character):
     """
     System Shit!
     """
+    character.db.lfg = False
+    character.db.lrp = False
     character.db.approved = False
     character.db.pvpok = False
     character.db.ooc_currency = 0

@@ -27,7 +27,7 @@ def display_meter(
     cur_value,
     max_value,
     length=30,
-    fill_color=["R", "Y", "G"],
+    fill_color=["R", "Y", "Y", "Y", "G", "G", "G", "G", "G", "G"],
     empty_color="B",
     text_color="w",
     align="left",
