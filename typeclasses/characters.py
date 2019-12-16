@@ -35,4 +35,5 @@ class Character(DefaultCharacter):
     """
     def at_object_creation(self):
         character_stats(self)
+        character_demographics(self)
 
