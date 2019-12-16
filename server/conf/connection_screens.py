@@ -27,7 +27,7 @@ CONNECTION_SCREEN = """
 |113==============================================================================|n
    ___                 _     _     We run on a base core of |gEvennia {}|n.
   /___\_ __ ___   ___ (_) __| | ___   That is running the |cKumaRPG {}|n.
- //  // '_ ` _ \ / _ \| |/ _` |/ _ \
+ //  // '_ ` _ \ / _ \| |/ _` |/ _ \\
 / \_//| | | | | | (_) | | (_| |  __/ To just visit us use |wconnect guest|n
 \___/ |_| |_| |_|\___/|_|\__,_|\___|    to sign into a temporary account. 
 ---------------------------------     __      
