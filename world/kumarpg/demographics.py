@@ -44,44 +44,33 @@ def character_demographics(character):
     character.db.rpglevel = 1
     """
     Combat System Stuff
-
-    _MAX = Maximum Value for the Pool
-    _CUR = Current Value for the pool.
-
-    HP = Health/Hit Points
-    FP = Fatigue Points
-    MP = Mana/Magic Points
-    EP = Ego Points
-    AP = Action Points (Not on Sheet.)
     """
-    character.db.ap_max = 0
-    character.db.ap_cur = 0
-    character.db.ep_max = 0
-    character.db.ep_cur = 0
-    character.db.hp_max = 0
-    character.db.hp_cur = 0
-    character.db.fp_max = 0
-    character.db.fp_cur = 0
-    character.db.mp_max = 0
-    character.db.mp_cur = 0
+    character.db.pool_mana = {"max": 0, "cur": 0}
+    character.db.pool_health = {"max": 0, "cur": 0}
+    character.db.pool_fatigue = {"max": 0, "cur": 0}
+    character.db.pool_ego = {"max": 0, "cur": 0}
+    character.db.pool_action = {"max": 0, "cur": 0}
     """
     Equipment Stuff
     """
-    character.db.slot_head = None
-    character.db.slot_neck = None
-    character.db.slot_shoulders = None
-    character.db.slot_chest = None
-    character.db.slot_arms = None
-    character.db.slot_hands = None
-    character.db.slot_back = None
-    character.db.slot_waist = None
-    character.db.slot_legs = None
-    character.db.slot_feet = None
-    character.db.slot_weapon = None
-    character.db.slot_accessory_1 = None
-    character.db.slot_accessory_2 = None
-    character.db.slot_accessory_3 = None
-    character.db.slot_accessory_4 = None
+    character.db.equipped_gear = {
+        "head": None,
+        "neck": None,
+        "back": None,
+        "shoulders": None,
+        "chest": None,
+        "arms": None,
+        "hands": None,
+        "waist": None,
+        "legs": None,
+        "feet": None,
+        "main hand": None,
+        "off hand": None,
+        "accessory 1": None,
+        "accessory 2": None,
+        "accessory 3": None,
+        "accessory 4": None
+    }
     """
     Conditions and stuff
     """
