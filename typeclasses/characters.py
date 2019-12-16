@@ -117,5 +117,5 @@ class Character(DefaultCharacter):
             "terra": stat_dict_magic,
             "cure": stat_dict_magic,
             "shield": stat_dict_magic,
-            "esuna": stat_dict_magic,
+            "esuna": stat_dict_magic
         }
