@@ -110,7 +110,7 @@ class Character(DefaultCharacter):
             "research":skill_dict_tradesman
         }
 
-        self.db.magic {
+        self.db.magic = {
             "pyro": stat_dict_magic,
             "aqua": stat_dict_magic,
             "aero": stat_dict_magic,
