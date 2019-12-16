@@ -1,5 +1,5 @@
 from evennia import DefaultCharacter
-from world import stat_dict
+from world.dict import stat_dict
 """
 This is the stat file for Dungeon 1.
 """
