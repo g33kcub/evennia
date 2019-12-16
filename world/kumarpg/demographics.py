@@ -39,6 +39,6 @@ def character_demographics(character):
     """
     Hidden Stats (Never Shown to Anyone)
     """
-    character.locks.add(view:perm(Developer);tell:all();delete:perm(Developer))
+    character.locks.add("view:perm(Developer);tell:all();delete:perm(Developer)")
     character.db.rpglevel = 1
 
