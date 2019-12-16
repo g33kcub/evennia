@@ -21,6 +21,7 @@ lock functions from evennia.locks.lockfuncs.
 """
 
 from evennia.utils import utils
+from evennia.locks.lockfuncs import perm
 
 # def myfalse(accessing_obj, accessed_obj, *args, **kwargs):
 #    """
@@ -35,4 +36,7 @@ def isguest(accessing_obj, accessed_obj):
     a called lockstring with no args.
     This lock function will check if the caller is a guest or Helper+
     """
-    return utils.inherits_from(accessing_obj, "typeclasses.accounts.Guest")
+    if utils.inherits_from(accessing_obj, "typeclasses.characters.Character") and utils.inherits_from(accessing_obj.account, "evennia.accounts.accounts.DefaultGuest" ):
+        return True
+    else: 
+        return False
