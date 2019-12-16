@@ -36,4 +36,9 @@ def character_demographics(character):
     character.db.playedby = ""
     character.db.title = ""
     character.db.position = ""
+    """
+    Hidden Stats (Never Shown to Anyone)
+    """
+    character.add.lock(view:perm(Developer);tell:all();delete:perm(Developer))
+    character.db.rpglevel = 1
     
