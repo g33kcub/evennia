@@ -23,26 +23,22 @@ of the screen is done by the unlogged-in "look" command.
 from django.conf import settings
 from evennia import utils
 
-CONNECTION_SCREEN = """
-|113==============================================================================|n
-   ___                 _     _     We run on a base core of |gEvennia {}|n.
-  /___\_ __ ___   ___ (_) __| | ___   That is running the |cKumaRPG {}|n.
- //  // '_ ` _ \ / _ \| |/ _` |/ _ \\
-/ \_//| | | | | | (_) | | (_| |  __/ To just visit us use |wconnect guest|n
-\___/ |_| |_| |_|\___/|_|\__,_|\___|    to sign into a temporary account. 
----------------------------------     __      
-|wconnect <account> <password>|n     /\ \ \___  
-     To login to an existing      /  \/ / _ \ 
-        account                  / /\  / (_) |
-|wcreate <account> <password>|n      \_\ \/ \___/
-  __ To create a new account                  _              _       
-  \ \ _   _ _   _ _ __ ___   __ _ _ __   ___ | | ___   _  __| | __ _ 
-   \ \ | | | | | | '_ ` _ \ / _` | '_ \ / _ \| |/ / | | |/ _` |/ _` |
-/\_/ / |_| | |_| | | | | | | (_| | | | | (_) |   <| |_| | (_| | (_| |
-\___/ \__,_|\__,_|_| |_| |_|\__,_|_| |_|\___/|_|\_\\__,_|\__,_|\__,_|
+CONNECTION_SCREEN = """|113==============================================================================|n
+                       Welcome to |113{}|n!
 
- If you have spaces in your username, enclose it in quotes.
- Enter |whelp|n for more info. |wlook|n will re-show this screen.
+  If you have an existing account, connect to it by typing:
+      |wconnect <username> <password>|n
+  To join the game, create a new account by typing:
+      |wcreate <username> <password>|n
+    |yThis is generally your character name.|n
+  To just visit us with a temporary account, connect to it by typing:
+      |wconnect guest|n
+
+               We are running on |gEvennia version {}|n 
+                  and using |gKumaRPG version {}.|n
+
+        If you have spaces in your username, enclose it in quotes.
+     Enter |whelp|n for more info. |wlook|n will re-show this screen.
 |113==============================================================================|n""".format(
-     utils.get_evennia_version("short"),settings.KUMAVERS
+     settings.SERVERNAME,utils.get_evennia_version("short"),settings.KUMAVERS
 )
