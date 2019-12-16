@@ -29,6 +29,7 @@ def character_demographics(character):
     System Shit!
     """
     character.db.approved = False
+    character.db.pvpok = False
     character.db.ooc_currency = 0
     """
     Cosmetic Crap!
