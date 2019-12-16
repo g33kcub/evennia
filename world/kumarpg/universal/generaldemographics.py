@@ -3,12 +3,11 @@ from evennia import DefaultCharacter
 This file contains all the demographic items for a character.
 """
 
-def character_demographics(character):
+def universal_demographics(character):
     """
     A function to call all fo the default demographics for a character.
     """
     character.db.race = "Human"
-    character.db.rpgclass = "Citizen"
     character.db.gender = "Neutral"
     character.db.dob = ""
     character.db.concept = ""
@@ -17,6 +16,7 @@ def character_demographics(character):
     character.db.health_status = "alive"
     character.db.currency = {"silver": 0, "gold": 0}
     character.db.resources = {"social": 0, "military": 0, "economic": 0}
+    character.db.dungeon = "d1"
     """
     Appearance Foo!
     """
@@ -37,21 +37,12 @@ def character_demographics(character):
     Cosmetic Crap!
     """
     character.db.playedby = ""
-    character.db.title = ""
     character.db.position = ""
     """
     Hidden Stats (Never Shown to Anyone)
     """
-    character.locks.add("examine:perm(Developer);tell:all();delete:perm(Developer);edit:perm(Developer)")
-    character.db.rpglevel = 1
-    """
-    Combat System Stuff
-    """
-    character.db.pool_mana = {"max": 0, "cur": 0}
-    character.db.pool_health = {"max": 0, "cur": 0}
-    character.db.pool_fatigue = {"max": 0, "cur": 0}
-    character.db.pool_ego = {"max": 0, "cur": 0}
     character.db.pool_action = {"max": 0, "cur": 0}
+    character.locks.add("examine:perm(Developer);tell:all();delete:perm(Developer);edit:perm(Developer)")
     """
     Equipment Stuff
     """
@@ -73,10 +64,3 @@ def character_demographics(character):
         "accessory 3": None,
         "accessory 4": None
     }
-    """
-    Conditions and stuff
-    """
-    character.db.conditions = {}
-
-
-

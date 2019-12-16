@@ -9,8 +9,11 @@ creation commands.
 """
 from evennia import DefaultCharacter
 from typeclasses.npcs import NPC
-from world.kumarpg.statdb import character_stats
-from world.kumarpg.demographics import character_demographics
+from world.kumarpg import stat_dict
+from world.kumarpg.universal import universal_stats
+from world.kumarpg.universal import universal_demographics
+from world.kumarpg.dungeon1 import dungeon1_stats
+from world.kumarpg.dungeon1 import dungeon1_demographics
 
 
 class Character(DefaultCharacter):
@@ -34,7 +37,15 @@ class Character(DefaultCharacter):
 
     """
     def at_object_creation(self):
-        character_stats(self)
-        character_demographics(self)
+        """
+        These are the stats shared by every city/dungeon.
+        """
+        universal_stats(self)
+        universal_demographics(self)
+        """
+        These are the stats used only in Dungeon 1.
+        """
+        dungeon1_stats(self)
+        dungeon1_demographics(self)
 
     
