@@ -14,7 +14,7 @@ def character_stats(Character):
     skill_dict_crafting4 = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 3, "group": 4 }
     skill_dict_crafting5 = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 3, "group": 5 }
     skill_dict_tradesman = { "rank" : 0, "lxp" : 0, "mp" : 0, "lxpl" : 0, "cor" : 0, "hl": False, "type": 4 }
-    self.db.stats = {
+    character.db.stats = {
         "earth": stat_dict,
         "fire": stat_dict,
         "air": stat_dict,
@@ -22,7 +22,7 @@ def character_stats(Character):
         "void": stat_dict
     }
 
-    self.db.skills = {
+    character.db.skills = {
         "swords": skill_dict_weapon,
         "knives": skill_dict_weapon,
         "hammers" : skill_dict_weapon,
@@ -64,7 +64,7 @@ def character_stats(Character):
         "research":skill_dict_tradesman
     }
 
-    self.db.magic = {
+    character.db.magic = {
         "fire": stat_dict_magic,
         "water": stat_dict_magic,
         "aero": stat_dict_magic,
