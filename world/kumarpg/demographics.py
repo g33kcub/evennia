@@ -42,4 +42,50 @@ def character_demographics(character):
     """
     character.locks.add("examine:perm(Developer);tell:all();delete:perm(Developer);edit:perm(Developer)")
     character.db.rpglevel = 1
+    """
+    Combat System Stuff
+
+    _MAX = Maximum Value for the Pool
+    _CUR = Current Value for the pool.
+
+    HP = Health/Hit Points
+    FP = Fatigue Points
+    MP = Mana/Magic Points
+    EP = Ego Points
+    AP = Action Points (Not on Sheet.)
+    """
+    character.db.ap_max = 0
+    character.db.ap_cur = 0
+    character.db.ep_max = 0
+    character.db.ep_cur = 0
+    character.db.hp_max = 0
+    character.db.hp_cur = 0
+    character.db.fp_max = 0
+    character.db.fp_cur = 0
+    character.db.mp_max = 0
+    character.db.mp_cur = 0
+    """
+    Equipment Stuff
+    """
+    character.db.slot_head = None
+    character.db.slot_neck = None
+    character.db.slot_shoulders = None
+    character.db.slot_chest = None
+    character.db.slot_arms = None
+    character.db.slot_hands = None
+    character.db.slot_back = None
+    character.db.slot_waist = None
+    character.db.slot_legs = None
+    character.db.slot_feet = None
+    character.db.slot_weapon = None
+    character.db.slot_accessory_1 = None
+    character.db.slot_accessory_2 = None
+    character.db.slot_accessory_3 = None
+    character.db.slot_accessory_4 = None
+    """
+    Conditions and stuff
+    """
+    character.db.conditions = {}
+
+
 
