@@ -17,6 +17,7 @@ def universal_demographics(character):
     character.db.currency = {"silver": 0, "gold": 0}
     character.db.resources = {"social": 0, "military": 0, "economic": 0}
     character.db.dungeon = "d1"
+    character.db.dungeonlist = ['d1']
     """
     Appearance Foo!
     """
