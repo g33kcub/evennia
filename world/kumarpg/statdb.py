@@ -1,3 +1,8 @@
+from evennia import DefaultCharacter
+"""
+This file contains all the various stats for the first dungeon.
+"""
+
 def character_stats(Character):
     """
     A function to call all fo the default stats for a character.
