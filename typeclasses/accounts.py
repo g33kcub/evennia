@@ -94,7 +94,7 @@ class Account(DefaultAccount):
     def at_account_creation(self):
         self.db.mails = []
         self.db.readmails = set()
-        self.add(mail.CmdMail())
+
 
 
 class Guest(DefaultGuest):
