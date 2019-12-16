@@ -5,7 +5,7 @@ This is the stat file for Dungeon 1.
 """
 
 def dungeon1_stats(character):
-     character.db.d1.stats = {
+    character.db.d1.stats = {
       "earth": stat_dict,
       "fire": stat_dict,
       "air": stat_dict,
