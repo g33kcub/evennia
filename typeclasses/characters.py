@@ -10,6 +10,7 @@ creation commands.
 from evennia import DefaultCharacter
 from typeclasses.npcs import NPC
 from world.kumarpg.statdb import character_stats
+from world.kumarpg.demographics import character_demographics
 
 
 class Character(DefaultCharacter):
