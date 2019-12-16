@@ -24,7 +24,7 @@ def dungeon1_stats(character):
         "bows": skill_dict_weapon,
         "fans": skill_dict_weapon,
         "rods": skill_dict_weapon,
-        "wands": skill_dict_weapon,
+        "wands": skill_dict_weapon
     }
 
     character.db.d1.magic = {
