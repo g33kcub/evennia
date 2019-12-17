@@ -7,8 +7,8 @@ def universal_demographics(character):
     """
     A function to call all fo the default demographics for a character.
     """
-    character.db.race = "Human"
-    character.db.gender = "Neutral"
+    character.db.race = "human"
+    character.db.gender = "neutral"
     character.db.dob = ""
     character.db.concept = ""
     character.db.familia = ""
@@ -18,6 +18,7 @@ def universal_demographics(character):
     character.db.resources = {"social": 0, "military": 0, "economic": 0}
     character.db.dungeon = "d1"
     character.db.dungeonlist = ['d1']
+    character.db.size = "medium"
     """
     Appearance Foo!
     """
