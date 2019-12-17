@@ -42,6 +42,18 @@ Required Values for a spell:
       * chant - chants 
       * sign - signs
       * scribe - enscribes
+
+----------------
+ System Documentation
+----------------
+* All spell values are given for an 1(F) spell. 
+* All spell values are not modified by abilities or anything, this is the basic spell.
+* All spells that deal damage use the dice_level associated with their rank for damage. 1(F)[4] to 10(X)[20].
+* This means a 10(X) version of firebolt will roll 10d20 for damage, then get modified. 
+* All costs are multiplied by the casting level before modified. So a 10(X) Firebolt costs 20 MP to cast.
+* A duration of 999 means it ends when the HP is diminished.
+* Min_DMG is the minimum damage the spell can do per level. So again a 10(X) Firebolt deals at minimum 20 HP.
+* Accuracy is determined by the default value + any stat mods. It cannot exceed 100% nor can it be lower than 1%.
 """
 
 SPELLS = {
