@@ -64,8 +64,8 @@ SPELLS = {
         "elemental": "fire",
         "accuracy": 85,
         "min_dmg": 2,
-        "desc_start": "A blast of flames"
-        "desc_inc": "blast of flames"
+        "desc_start": "A blast of flames",
+        "desc_inc": "blast of flames",
         "cast_action": "chant"
     },
     "will-o-wisp": {
@@ -79,8 +79,8 @@ SPELLS = {
         "status": "protect"
         "status_duration": 999,
         "status_chance": 100,
-        "desc_start": "A ruby colored bubble"
-        "desc_inc": "a ruby colored bubble"
+        "desc_start": "A ruby colored bubble",
+        "desc_inc": "a ruby colored bubble",
         "cast_action": "signs"
     }
 }
