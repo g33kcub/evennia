@@ -40,3 +40,17 @@ Required Values for a spell:
       * chant - chants 
       * sign - signs
 """
+
+SPELLS = {
+    "firebolt": {
+        "spellfunction": spell_attack,
+        "cost": 2,
+        "target": "other",
+        "elemental": "fire",
+        "accuracy": 85,
+        "min_dmg": 2,
+        "desc_start": "A blast of flames"
+        "desc_inc": "blast of flames"
+        "cast_action": "chant"
+    }
+}
