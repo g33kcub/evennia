@@ -29,16 +29,19 @@ Required Values for a spell:
    * object_key (str): The object the spell summons. 
    * elemental (str): The element the spell is aligned with. (non-elemental, default)
    * dice_level (array): The dice used by default. (['4','4','6','6','8','8','10','12','20'])
+   * max_hp (int): This is the base maximum damage it will take before failing.  (999 is absolute max.)
 ----------------
  The following are required. They determine values.
 ----------------
    * Accuracy (int): How accurate is the spell in percents? (100 is autohit)
    * Min_DMG (int): This is the minimum damage the spell does. If the damage roll rolls less than, then this is applied.
+                    If set to 0, this is a non-damaging spell. 
    * desc_start (str): This is what the description of the spell if it starts the sentence. (A jet of flame)
    * desc_inc (str): This is what the description of the spell if it is in the sentence. (jets of flame)
    * cast_action (str): This is what happens when you cast the spell. (chants default)
       * chant - chants 
       * sign - signs
+      * scribe - enscribes
 """
 
 SPELLS = {
@@ -52,5 +55,20 @@ SPELLS = {
         "desc_start": "A blast of flames"
         "desc_inc": "blast of flames"
         "cast_action": "chant"
+    },
+    "will-o-wisp": {
+        "spellfuction": spell_protect,
+        "cost": 5,
+        "target": "anychar",
+        "elemental": "fire",
+        "accuracy": 100,
+        "max_hp": 15,
+        "min_dmg": 0,
+        "status": "protect"
+        "status_duration": 999,
+        "status_chance": 100,
+        "desc_start": "A ruby colored bubble"
+        "desc_inc": "a ruby colored bubble"
+        "cast_action": "signs"
     }
 }
