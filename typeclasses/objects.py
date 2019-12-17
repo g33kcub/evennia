@@ -12,6 +12,8 @@ inheritance.
 """
 from evennia import DefaultObject
 from typeclasses.monsters import Monster
+from typeclasses.wearable_item import WearableItem
+from typeclasses.consumable_item import ConsumableItem
 
 
 class Object(DefaultObject):
