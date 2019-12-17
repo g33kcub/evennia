@@ -6,8 +6,19 @@ Rooms are simple containers that has no location of their own.
 """
 
 from evennia import DefaultRoom
+from evennia.utils.ansi import strip_ansi
+from collections import defaultdict
 import time
-from world.utilities import columns
+from world.utilities.format import columns, wrap, header, display_time, trail
+
+# Define the different types of rooms here, with the exit category
+# they should fall under.
+_ROOM_TYPES = {
+    "generic":  "Exts",
+    "outdoors": "Roads and Paths",
+    "inside":  "Near By",
+    "building": "Buildings & Residences"
+}
 
 class Room(DefaultRoom):
     """
@@ -20,84 +31,38 @@ class Room(DefaultRoom):
     properties and methods available on all Objects.
     """ 
 
-    def wrap(self, string="", width=78):
-        str_list = string.split()
-        
-        output = ""
-        line = ""
-        for w in str_list:
-            if len(w + line) >= width:
-                output += ("%s\n" % line).lstrip()
-                line = "%s " % w
-            else:
-                line += "%s " % w
-        output += line
-        return output
-
-    def display_time(self, seconds):
-        N = int(seconds)
-        min = 60
-        hour = 60 * 60
-        day = 60 * 60 * 24
-        output = "" 
-        HOUR = N // hour
-        MINUTE = (N - (HOUR * hour)) // min
-        SECONDS = N - ((HOUR * hour) + (MINUTE * min))
-        
-        if HOUR: 
-            output += "%sh " % HOUR
-        
-        if MINUTE:
-            output += "%sm " % MINUTE
-        
-        if seconds:
-            output +=  "%ss" % SECONDS
-        
-        return output
-
     def at_object_creation(self):
-        """
-        Settings to be applied when a new room is dug.
-        """
-
         self.db.ic = False
-        self.db.type = "outside"
+        self.db.type = "generic"
+        self.db.is_dark = False
+        self.db.is_blind = False
     
-    def make_header(self, string):
-        """
-        Create a header for the different portions of the room parent.
-        """
-        length = 78 - (len(string) + 4)
-        return "|113[|w " + string + " |113]|n" + "|113-|n" * length + "\n"
-
 
     def detail_string(self, target, looker):
         "Shows the details of the individual room description rows"
 
         if target.has_account:
-            
-            length = len(target.get_display_name(looker))
 
-            # denote if a super user or not.
-            if target.is_superuser:
-                name = "|540*|n " + target.get_display_name(looker)
-                output = name[:22] + "..." if length > 30 else  name.ljust(30)  
-            else:
-                name = "  " + target.get_display_name(looker)
-                output = name[:20] + "..." if length > 24 else name.ljust(24)
-                      
-            short_desc = target.db.short_desc
-            if short_desc: 
-                output += (short_desc[:40] + "...") if len(short_desc) > 43  else short_desc.ljust(43) 
-            else: 
-                output += "use |wshortdesc <desc>|n to set this message.".ljust(47)
-            
+            # denote if the user gets a marker or not.
+            if target.locks.check_lockstring(target, "dummy:perm(builder)"): marker = "|540*|n "
+            elif target.locks.check_lockstring(target, "dummy:perm(helper)"): marker = "|113!|n "
+            else: marker = "  "    
+
+            # piece together the name
+            name = marker + trail(target.get_display_name(looker), length=15)   
+
+            # short_desc
+            default_desc = trail("use |wshortdesc <desc>|n to set this. Message.", length=45)  
+            short_desc = trail(target.db.short_desc, length=45) if target.db.short_desc else default_desc
+
+            # idle time
             session = target.account.sessions.get()[0]
-            idle = self.display_time(time.time() - session.cmd_last_visible)
+            idle = display_time(time.time() - session.cmd_last_visible)
+            output = name + short_desc + trail(idle,length=15, dir="right")
+            return output + "\n"
 
-            output +=  " " * (10 - len(idle)) + "%s\n" % idle
-            return output
         elif target.destination:
+
             alias = "%s" % target.aliases
             alias = alias.split(",")
             try:
@@ -113,15 +78,13 @@ class Room(DefaultRoom):
         looking at this object.
         """
         visible = (con for con in self.contents if con.access(looker, "view"))
-        exitsi, exitso, users, things = [], [], [], {}
+        exits, users, things = defaultdict(list), [], defaultdict(list) 
         
+        # Seperate out the visible room contents into different catagories
         for con in visible:
-            if con.destination:
-                exitsi.append(con) if con.destination.is_indoors else exitso.append(con)
-            elif con.has_account:
-                users.append(con)
-            else: 
-                things[con].append(con)
+            if con.destination: exits[con.destination.db.type].append(con)
+            elif con.has_account: users.append(con)
+            else: things[con.key].append(con)
         
         # handle room title
         string = "|540In Character - |w" if self.db.ic else "|540Out of Character - |w" 
@@ -130,37 +93,31 @@ class Room(DefaultRoom):
 
 
         # Description
-        string += "You See Nothing Special\n" if not self.db.desc else self.wrap(self.db.desc) + "\n\n"
+        string += "You See Nothing Special\n\n" if not self.db.desc else wrap(self.db.desc) + "\n"
         # Secondary Description
-        if self.db.sec_desc: string += self.wrap("\n%s\n" % self.db.sec_desc) + "\n\n"
+        if self.db.sec_desc: string += "\n" + wrap("%s" % self.db.sec_desc) + "\n"
 
         #format the desc strings to 78 characters.
 
-        # Character section    
-        string += self.make_header("Characters")
-        for user in users: string += self.detail_string(user, looker)
-
-        # Exits
-        if exitsi:
-            exits = "|".join(map(lambda x: self.detail_string(x, looker), exitsi))
+        if not self.db.is_blind or self.locks.check_lockstring(looker, "dummy:perm(builder)"):
             
-            string += self.make_header("Buildings & Residences") 
-            string += columns(exits, sep="|") + "\n"
+            # Add an extra space if there's a secondary description
+            string += "\n" if self.db.sec_desc else ""
+            
+            # Character section    
+            string += header("|w Characters ")
+            for user in users: string += self.detail_string(user, looker)
+
+            # Exits
+            for exit in exits:        
+                ex = "|".join(map(lambda x: self.detail_string(x, looker), exits[exit]))
+                string += header("|w %s " % _ROOM_TYPES[exit])
+                string += columns(ex, sep="|") + "\n"
         
-        if exitso:
-            exits = "|".join(map(lambda x: self.detail_string(x, looker), exitso))
-            
-            string += self.make_header("Buildings & Residences") 
-            string += columns(exits, sep="|") + "\n"
-
         # Ending line
         string += ("|113=|n" * 78 ) 
         return string
 
-    @property
-    def is_indoors(self):
-        "Check to see if this is an interior room or not"
-        return True if self.db.indoors else False
 
 
 class Inside(Room):
@@ -171,10 +128,16 @@ class Inside(Room):
     """
 
     def at_object_creation(self):
-        self.db.indoors = True
+        self.db.type = "inside"
         return super().at_object_creation()
         
-    
+
+class Building(Room):
+    def at_object_creation(self):
+        self.db.type = "building"
+        return super().at_object_creation()
+
+
 class Outside(Room):
     """
     This room represents any exterior room.  A perfect plce to
@@ -182,5 +145,5 @@ class Outside(Room):
     """
 
     def at_object_creation(self):
-        self.db.indoors = False
+        self.db.type = "outside"
         return super().at_object_creation()
