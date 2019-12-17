@@ -15,7 +15,7 @@ from world.utilities.format import columns, wrap, header, display_time, trail
 # they should fall under.
 _ROOM_TYPES = {
     "generic":  "Exts",
-    "outdoors": "Roads and Paths",
+    "outside": "Roads and Paths",
     "inside":  "Near By",
     "building": "Buildings & Residences"
 }
