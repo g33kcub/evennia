@@ -11,6 +11,8 @@ Required Values for a spell:
      * anychar - Any character object in the db. 
      * other - Any object in the db, except caster.
      * otherchar - Any character in the db, execpt the caster. 
+     * party - Entire caster's party.
+     * eparty - Entire enemy party.
    * Spellfunction (callable): What type of spell is the spell. From spell_types.py
 ----------------
  The optional flags are defaulted to true. However, they are not mutually exclusive.
@@ -54,6 +56,7 @@ Required Values for a spell:
 * A duration of 999 means it ends when the HP is diminished.
 * Min_DMG is the minimum damage the spell can do per level. So again a 10(X) Firebolt deals at minimum 20 HP.
 * Accuracy is determined by the default value + any stat mods. It cannot exceed 100% nor can it be lower than 1%.
+* Max_HP is multiplied by the casting level. 
 """
 
 SPELLS = {
@@ -62,6 +65,9 @@ SPELLS = {
         "cost": 2,
         "target": "other",
         "elemental": "fire",
+        "status": "burning",
+        "status_chance": 25,
+        "status_duration": 2,
         "accuracy": 85,
         "min_dmg": 2,
         "desc_start": "A blast of flames",
@@ -82,5 +88,47 @@ SPELLS = {
         "desc_start": "A ruby colored bubble",
         "desc_inc": "a ruby colored bubble",
         "cast_action": "signs"
+    }
+    "phoenix weapon": {
+        "spellfunction": spell_buff_noprotect,
+        "cost": 3,
+        "target": "anyobj",
+        "elemental": "fire",
+        "accuracy": 100,
+        "min_dmg": 0,
+        "status": "blazing",
+        "status_chance": 100,
+        "status_duration": 5,
+        "noncombat_spell": False,
+        "desc_start": "Igniting in flames",
+        "desc_inc": "ignites in flames",
+        "cast_action": "scribe"
+    },
+    "phoenix flare": {
+        "spellfunction": spell_attack,
+        "cost": 10,
+        "target": "eparty",
+        "elemental": "fire",
+        "min_dmg": 15,
+        "status": "burning",
+        "status_chance": 100,
+        "status_duration": 5,
+        "noncombat_spell": False,
+        "desc_start": "A wave of white hot flames",
+        "desc_in": "waves of white hot flames",
+        "cast_action": "chant",
+        "dice_level": ['10','10','10','12','12','12','20','20','20']
+    },
+    "salamander": {
+        "spellfunction": spell_summon,
+        "cost": 20,
+        "target": "none",
+        "min_dmg": 0,
+        "object_key": "Salamander",
+        "accuracy": 95,
+        "pvp_spell": False,
+        "desc_start": "Opens a fiery portal summoning Salamander",
+        "desc_inc": "summons Salamander from within a fiery portal",
+        "cast_action": "chant"
     }
 }
