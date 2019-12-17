@@ -32,6 +32,7 @@ Required Values for a spell:
    * elemental (str): The element the spell is aligned with. (non-elemental, default)
    * dice_level (array): The dice used by default. (['4','4','6','6','8','8','10','12','20'])
    * max_hp (int): This is the base maximum damage it will take before failing.  (999 is absolute max.)
+   * max_rank (int): This is the maximum rank this spell can be, default is 10(X)
 ----------------
  The following are required. They determine values.
 ----------------
@@ -129,6 +130,7 @@ SPELLS = {
         "pvp_spell": False,
         "desc_start": "Opens a fiery portal summoning Salamander",
         "desc_inc": "summons Salamander from within a fiery portal",
-        "cast_action": "chant"
+        "cast_action": "chant",
+        "max_rank": 1
     }
 }
