@@ -120,7 +120,13 @@ SPELLS = {
     "armor break": {},
     "power break": {},
     "hex": {},
-    "chaosbolt": {},
+    "chaosbolt": {
+        "spellfunction": spell_attack_wild,
+        "cost": 2,
+        "target": "other",
+        "elemental": "chaos",
+
+    },
     "entropy field": {},
     "chaotic bombardment": {},
     "firebolt": {
@@ -172,7 +178,7 @@ SPELLS = {
         "cost": 10,
         "target": "eparty",
         "elemental": "fire",
-        "min_dmg": 15,
+        "min_dmg": 7,
         "status": "burning",
         "status_chance": 100,
         "status_duration": 5,

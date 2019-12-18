@@ -111,6 +111,7 @@ def dungeon1_stats(character):
     }
 
     character.db.d1_abilities = {
+        "direction sense": ability_dict,
         "flight": ability_dict,
         "night sight": ability_dict,
         "adaptive": ability_dict,
