@@ -5,13 +5,10 @@ def header(string, fill="|113-|n", length="78", lframe="|113[|n", rframe="|113]|
     """
     Create a header for different areas of the game.
     """
-    str_len = int(length) - round(len(strip_ansi(string)) + len(strip_ansi(lframe)) +  len(strip_ansi(lframe)) - offset)
+    str_len = int(length) - round(len(strip_ansi(string)) + len(strip_ansi(lframe)) +  len(strip_ansi(lframe))) - offset
     if just.lower() == "left":
         return fill * offset + lframe + string + rframe + fill * str_len + "\n"
-    elif just.lower() == "right":
-        return  lframe + string + rframe + fill + str_len + fill * offset + "\n"
-    elif just.lower() == "center":
-        return fill * (str_len / 2) + lframe + string + rframe + fill * (str_len / 2) +  fill * (length - str_len) +"\n"  
+    else: return  lframe + string + rframe + fill * str_len + (fill * offset) + "\n" 
 
 
 def wrap(string="", width=78):
@@ -38,12 +35,10 @@ def columns(string, sep=" ", cols=2, delim=" "):
     string.sort()
     for word in string:
         if count < cols:
-            w = word.strip()
-            output += w + delim * (length - len(w))
+            output += trail(word, length=length - 1)
             count += 1
         else:
-            w = word.strip()
-            output += "\n" + w + delim * (length - len(w))
+            output += "\n" + trail(word, length=length - 1)
             count = 0
     return output
 

@@ -15,8 +15,8 @@ from world.utilities.format import columns, wrap, header, display_time, trail
 # they should fall under.
 _ROOM_TYPES = {
     "generic":  "Exts",
-    "outside": "Roads and Paths",
-    "inside":  "Near By",
+    "outside":  "Roads and Paths",
+    "inside":   "Near By",
     "building": "Buildings & Residences"
 }
 
@@ -70,7 +70,9 @@ class Room(DefaultRoom):
             except TypeError:
                 alias = alias[0]
             alias = "[%s]" % alias
-            return alias.upper() + " " * (6 - len(alias)) + target.get_display_name(looker) + "\n" 
+            exit_name = target.get_display_name(looker)
+
+            return alias.upper() + " " * (6 - len(alias)) +  exit_name
 
     def return_appearance(self, looker):
         """
@@ -79,26 +81,24 @@ class Room(DefaultRoom):
         """
         visible = (con for con in self.contents if con.access(looker, "view"))
         exits, users, things = defaultdict(list), [], defaultdict(list) 
-        
+
         # Seperate out the visible room contents into different catagories
         for con in visible:
             if con.destination: exits[con.destination.db.type].append(con)
             elif con.has_account: users.append(con)
             else: things[con.key].append(con)
         
-        # handle room title
+        # handle room Area
         string = "|540In Character - |w" if self.db.ic else "|540Out of Character - |w" 
         string +=  self.get_display_name(looker) + "|n\n"
         string += ("|113=|n" * 78 ) + "\n"
-
 
         # Description
         string += "You See Nothing Special\n\n" if not self.db.desc else wrap(self.db.desc) + "\n"
         # Secondary Description
         if self.db.sec_desc: string += "\n" + wrap("%s" % self.db.sec_desc) + "\n"
 
-        #format the desc strings to 78 characters.
-
+        # If the room is set to blind, test to see if the looker can see contents or not.
         if not self.db.is_blind or self.locks.check_lockstring(looker, "dummy:perm(builder)"):
             
             # Add an extra space if there's a secondary description
