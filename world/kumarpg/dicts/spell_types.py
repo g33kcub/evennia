@@ -27,6 +27,12 @@ def spell_attack():
     """
     pass
 
+def spell_attack_wild():
+    """
+    As for spell_attack(), except there is a chance for crazy effects.
+    """
+    pass
+
 def spell_attack_status():
     """
     As for spell_attack(), except it has a percentage to attach a status.
@@ -49,6 +55,12 @@ def spell_buff_noprotect():
 def spell_protect():
     """
     This spell provides armor or reflect protection to the target.
+    """
+    pass
+
+def spell_protect_wild():
+    """
+    As for spell_protect(), except there is a chance for craziness.
     """
     pass
 

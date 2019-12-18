@@ -41,8 +41,20 @@ def dungeon1_stats(character):
     }
 
     character.db.d1_magic = {
+        "flashbug": magic_dict,
+        "shiva": magic_dict,
+        "counterspell": magic_dict,
+        "magus": magic_dict,
+        "hex": magic_dict,
+        "chaosbolt": magic_dict,
+        "entropy field": magic_dict,
+        "chaotic bombardment": magic_dict,
+        "mana weapon": magic_dict,
+        "divine judgment": magic_dict,
+        "raging thunderstorm": magic_dict,
         "firebolt": magic_dict,
         "will-o-wisp": magic_dict,
+        "tidal shockwave": magic_dict,
         "aquabolt": magic_dict,
         "bubble screen": magic_dict,
         "aerobolt": magic_dict,
