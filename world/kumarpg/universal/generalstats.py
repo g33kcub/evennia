@@ -49,6 +49,7 @@ def universal_stats(character):
         "weapon smith":skill_dict_crafting1,
         "black smith":skill_dict_crafting1,
         "jeweler":skill_dict_crafting1,
+        "tinkerer": skill_dict_crafting1,
         "carpenter":skill_dict_crafting1,
         "leather working":skill_dict_crafting2,
         "seamstress":skill_dict_crafting2,
