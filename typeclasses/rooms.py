@@ -8,6 +8,7 @@ Rooms are simple containers that has no location of their own.
 from evennia import DefaultRoom
 from evennia.utils.ansi import strip_ansi
 from collections import defaultdict
+from commands.flags import FlagHandler
 import time
 from world.utilities.format import columns, wrap, header, display_time, trail
 
@@ -36,6 +37,10 @@ class Room(DefaultRoom):
         self.db.type = "generic"
         self.db.is_dark = False
         self.db.is_blind = False
+        """
+        Install the flag system handler.
+        """
+        self.flags = FlagHandler()
     
 
     def detail_string(self, target, looker):

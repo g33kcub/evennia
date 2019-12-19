@@ -8,7 +8,7 @@ def header(string, fill="|113-|n", length="78", lframe="|113[|n", rframe="|113]|
     str_len = int(length) - round(len(strip_ansi(string)) + len(strip_ansi(lframe)) +  len(strip_ansi(lframe))) - offset
     if just.lower() == "left":
         return fill * offset + lframe + string + rframe + fill * str_len + "\n"
-    else: return  lframe + string + rframe + fill * str_len + (fill * offset) + "\n" 
+    else: return fill * str_len + lframe + string + rframe + fill * offset +  "\n" 
 
 
 def wrap(string="", width=78):
@@ -26,7 +26,7 @@ def wrap(string="", width=78):
     output += line
     return output
 
-def columns(string, sep=" ", cols=2, delim=" "):
+def columns(string, sep=" ", cols=2, delim=" ", offset=0):
     "Split a string into columns"
     output = ""
     count = 0
@@ -35,11 +35,11 @@ def columns(string, sep=" ", cols=2, delim=" "):
     string.sort()
     for word in string:
         if count < cols:
-            output += trail(word, length=length - 1)
+            output += trail(delim * offset + word, length=length, delim=delim)
             count += 1
         else:
-            output += "\n" + trail(word, length=length - 1)
-            count = 0
+            output += "\n" + trail(delim * offset + word, length=length, delim=delim)
+            count = 1
     return output
 
 def display_time(seconds):
@@ -62,10 +62,10 @@ def display_time(seconds):
     
     return " ".join(container[:2]) + "|n"
 
-def trail(string, length=26, tail="...", dir ="left"):
+def trail(string, length=26, tail="...", dir ="left", delim=" "):
     l = length - len(tail)
     
     if len(strip_ansi(string)) <= l:
-        if dir.lower() == 'left': return string + " " * (length - len(strip_ansi(string)))
-        else: return  " " * (length - len(strip_ansi(string))) + string
+        if dir.lower() == 'left': return string + delim * (length - len(strip_ansi(string)))
+        else: return  delim * (length - len(strip_ansi(string))) + string
     else: return string[:l] + tail

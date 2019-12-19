@@ -63,6 +63,6 @@ def universal_stats(character):
         "alchemy":skill_dict_crafting5,
         "culinarian":skill_dict_crafting5,
         "appraisal":skill_dict_tradesman,
-        "research":skill_dict_tradesman
+        "research":skill_dict_tradesman,
         "survival": skill_dict_tradesman
     }

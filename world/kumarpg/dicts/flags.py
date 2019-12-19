@@ -2,7 +2,7 @@
 # Just a dictionary with tag:category format.
 
 flags = {
-    "ooc"       : {
+    "ooc": {
         "aliases": [],
         "code": "o",
         "set": "perm(player)",

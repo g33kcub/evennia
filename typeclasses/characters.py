@@ -9,6 +9,7 @@ creation commands.
 """
 from evennia import DefaultCharacter
 from typeclasses.npcs import NPC
+from commands.flags import FlagHandler
 from world.kumarpg.universal.generalstats import universal_stats
 from world.kumarpg.universal.generaldemographics import universal_demographics
 from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
@@ -36,6 +37,12 @@ class Character(DefaultCharacter):
 
     """
     def at_object_creation(self):
+        super().at_object_creation()
+        """
+        Install the flag system handler.
+        """
+        self.flags = FlagHandler()
+
         """
         These are the stats shared by every city/dungeon.
         """
@@ -46,5 +53,6 @@ class Character(DefaultCharacter):
         """
         dungeon1_stats(self)
         dungeon1_demographics(self)
+
 
     
