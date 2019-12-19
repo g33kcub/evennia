@@ -36,13 +36,13 @@ class Character(DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
+
+    @property
+    def flags(self):
+        return FlagHandler(self)
+
     def at_object_creation(self):
         super().at_object_creation()
-        """
-        Install the flag system handler.
-        """
-        self.flags = FlagHandler()
-
         """
         These are the stats shared by every city/dungeon.
         """
@@ -52,7 +52,4 @@ class Character(DefaultCharacter):
         These are the stats used only in Dungeon 1.
         """
         dungeon1_stats(self)
-        dungeon1_demographics(self)
-
-
-    
+        dungeon1_demographics(self)    

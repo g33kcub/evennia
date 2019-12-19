@@ -32,6 +32,10 @@ class Room(DefaultRoom):
     properties and methods available on all Objects.
     """ 
 
+    @property
+    def flags(self):
+        return FlagHandler(self)
+
     def at_object_creation(self):
         self.db.ic = False
         self.db.type = "generic"
