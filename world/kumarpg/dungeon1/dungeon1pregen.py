@@ -24,10 +24,77 @@ Pixie Gatherer - 4 skill choices
 Dwarven Berserker - 3 Skill Choices.
 Dwarven Shield Bearer - 4 Skill Choices
 Dwarven Smith - 4 skill choices.
+
+Inojin Alpha - 3 Skill Choices
 """
 
 PREGEN_DUNGEON_1 = {
-        "dwarven smith": {
+        "inojin alpha": {
+        "race": "inojin",
+        "class": "adventurer",
+        "concept": "inojin alpha",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "caninonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
+            "military": 250,
+            "economic": 5
+        },
+        "currency": {
+            "silver": 1500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "armor smith": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "weapon smith": {
+                "rank": 2,
+                "lxpl": 300
+            },
+            "black smith": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "dwarven smith": {
         "race": "dwarf",
         "class": "citizen",
         "concept": "dwarven smith",
@@ -66,13 +133,17 @@ PREGEN_DUNGEON_1 = {
         "resources": {
             "social": 20,
             "military": 5,
-            "economic": 10
+            "economic": 15
         },
         "currency": {
             "silver": 500,
             "gold": 10
         },
         "d1_skills": {
+            "hammers": {
+                "rank": 1,
+                "lxpl": 300
+            },
             "armor smith": {
                 "rank": 1,
                 "lxpl": 300
@@ -132,7 +203,7 @@ PREGEN_DUNGEON_1 = {
         "resources": {
             "social": 10,
             "military": 5,
-            "economic": 20
+            "economic": 25
         },
         "currency": {
             "silver": 1500,
@@ -194,7 +265,7 @@ PREGEN_DUNGEON_1 = {
         "resources": {
             "social": 10,
             "military": 20,
-            "economic": 5
+            "economic": 10
         },
         "currency": {
             "silver": 500,
@@ -647,9 +718,9 @@ PREGEN_DUNGEON_1 = {
             }
         }
     },
-        "elven priest": {
+    "elven priest": {
         "race": "elf",
-        "class": "supporter",
+        "class": "citizen",
         "concept": "elven priest",
         "languages": {
             "common": {
@@ -688,8 +759,8 @@ PREGEN_DUNGEON_1 = {
             "economic": 20
         },
         "currency": {
-            "silver": 1200,
-            "gold": 23
+            "silver": 1500,
+            "gold": 20
         },
         "d1_skills": {
             "rods": {
@@ -697,9 +768,9 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 300
             },
             "healing energy": {
-                "rank": 1,
+                "rank": 3,
                 "lxpl": 500
-            }
+            },
         },
         "d1_abilities": {
             "night sight": {
@@ -708,7 +779,7 @@ PREGEN_DUNGEON_1 = {
             }
         }
     },
-        "elven enchanter": {
+    "elven enchanter": {
         "race": "elf",
         "class": "citizen",
         "concept": "elven enchanter",
@@ -948,4 +1019,3 @@ PREGEN_DUNGEON_1 = {
             }
         }
     }
-}
