@@ -127,5 +127,70 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 500
             }
         }
+    },
+        "elven enchanter": {
+        "race": "elf",
+        "class": "citizen",
+        "concept": "elven enchanter",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "elven": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 2,
+                "lxpl": 600
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 25,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "swords": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "enchanter": {
+                "rank": 3,
+                "lxpl": 600
+            },
+            "haggling": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
     }
 }
