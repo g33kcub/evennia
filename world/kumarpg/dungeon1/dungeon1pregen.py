@@ -1011,3 +1011,4 @@ PREGEN_DUNGEON_1 = {
             }
         }
     }
+}

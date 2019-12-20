@@ -8,13 +8,14 @@ creation commands.
 
 """
 from evennia import DefaultCharacter
-from typeclasses.npcs import NPC
+from evennia.contrib import rplanguage
 from commands.flags import FlagHandler
-from world.kumarpg.universal.generalstats import universal_stats
-from world.kumarpg.universal.generaldemographics import universal_demographics
-from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
 from world.kumarpg.dungeon1.dungeon1demographics import dungeon1_demographics
+from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
+from world.kumarpg.universal.generaldemographics import universal_demographics
+from world.kumarpg.universal.generalstats import universal_stats
 
+rplanguage.add_language()
 
 class Character(DefaultCharacter):
     """
@@ -52,4 +53,4 @@ class Character(DefaultCharacter):
         These are the stats used only in Dungeon 1.
         """
         dungeon1_stats(self)
-        dungeon1_demographics(self)    
+        dungeon1_demographics(self)
