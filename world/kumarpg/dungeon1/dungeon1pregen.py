@@ -20,9 +20,203 @@ Half-Elf Beastmaster - 4 Skill Choices.
 Pixie Dagger Dancer - 3 Skill Choices.
 Pixie Trickster - 4 skill choices
 Pixie Gatherer - 4 skill choices
+
+Dwarven Berserker - 3 Skill Choices.
+Dwarven Shield Bearer - 4 Skill Choices
+Dwarven Smith - 4 skill choices.
 """
 
 PREGEN_DUNGEON_1 = {
+        "dwarven smith": {
+        "race": "dwarf",
+        "class": "citizen",
+        "concept": "dwarven smith",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "dwarvish": {
+                "rank": 5,
+            }
+        },
+        "size": "small",
+        "d1_stats": {
+            "earth": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 4,
+        "resources": {
+            "social": 20,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "armor smith": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "weapon smith": {
+                "rank": 2,
+                "lxpl": 300
+            },
+            "black smith": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "dwarven shield bearer": {
+        "race": "dwarf",
+        "class": "supporter",
+        "concept": "dwarven sheild bearer",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "dwarvish": {
+                "rank": 5,
+            }
+        },
+        "size": "small",
+        "d1_stats": {
+            "earth": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 4,
+        "resources": {
+            "social": 10,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1500,
+            "gold": 20
+        },
+        "d1_skills": {
+            "battle shields": {
+                "rank": 3,
+                "lxpl": 600
+            },
+            "defense up": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "dwarven berserker": {
+        "race": "dwarf",
+        "class": "adventurer",
+        "concept": "dwarven berserker",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "dwarvish": {
+                "rank": 5,
+            }
+        },
+        "size": "small",
+        "d1_stats": {
+            "earth": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 4,
+        "resources": {
+            "social": 10,
+            "military": 20,
+            "economic": 5
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 20
+        },
+        "d1_skills": {
+            "axes": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "hammers": {
+                "rank": 2,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
     "pixie dagger dancer": {
         "race": "pixie",
         "class": "adventurer",
