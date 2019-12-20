@@ -8,7 +8,7 @@ Adventurer, Supporter & Citizen
 Elven Swordsman
 """
 
-PREGEN_DUNGEON_1 {
+PREGEN_DUNGEON_1 = {
     "elven swordsman": {
         "race": "elf",
         "class": "adventurer",
@@ -57,6 +57,12 @@ PREGEN_DUNGEON_1 {
             "swords": {
                 "rank": 3,
                 "lxpl": 1200
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 300
             }
         }
     }
