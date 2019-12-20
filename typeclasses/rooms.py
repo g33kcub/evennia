@@ -21,6 +21,7 @@ _ROOM_TYPES = {
     "building": "Buildings & Residences"
 }
 
+
 class Room(DefaultRoom):
     """
     Rooms are like any Object, except their location is None
@@ -41,11 +42,7 @@ class Room(DefaultRoom):
         self.db.type = "generic"
         self.db.is_dark = False
         self.db.is_blind = False
-        """
-        Install the flag system handler.
-        """
-        self.flags = FlagHandler()
-    
+
 
     def detail_string(self, target, looker):
         "Shows the details of the individual room description rows"
@@ -130,7 +127,6 @@ class Room(DefaultRoom):
         # Ending line
         string += ("|113=|n" * 78 ) 
         return string
-
 
 
 class Inside(Room):
