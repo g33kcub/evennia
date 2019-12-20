@@ -6,6 +6,7 @@ Human, Half-Elf, Elf, Pixie, Inojin, Nekojin & Dwarf
 Adventurer, Supporter & Citizen
 
 Elven Swordsman
+Elven Priest
 """
 
 PREGEN_DUNGEON_1 = {
@@ -24,19 +25,19 @@ PREGEN_DUNGEON_1 = {
         "d1_stats": {
             "earth": {
                 "rank": 1,
-                ,"lxpl": 300
+                "lxpl": 500
             },
             "fire": {
                 "rank": 1,
-                "lxpl": 300
+                "lxpl": 500
             },
             "water": {
                 "rank": 1,
-                "lxpl": 300
+                "lxpl": 500
             },
             "air": {
                 "rank": 1,
-                "lxpl": 300
+                "lxpl": 500
             },
             "void": {
                 "rank": 2,
@@ -62,7 +63,68 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+        "elven priest": {
+        "race": "elf",
+        "class": "supporter",
+        "concept": "elven priest",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "elven": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 2,
+                "lxpl": 600
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 15,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1200,
+            "gold": 23
+        },
+        "d1_skills": {
+            "rods": {
+                "rank": 1,
                 "lxpl": 300
+            },
+            "healing energy": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
             }
         }
     }
