@@ -14,13 +14,15 @@ Human Paladin - 4 Skill Choices.
 Human Guild Associate - 4 skill choices.
 
 Half-Elf Archer - 3 skill Choices.
+Half-Elf Scout -  4 Skill choices.
+Half-Elf Beastmaster - 4 Skill Choices.
 """
 
 PREGEN_DUNGEON_1 = {
-    "elven swordsman": {
+    "half-elf archer": {
         "race": "elf",
         "class": "adventurer",
-        "concept": "elven swordsman",
+        "concept": "half-elf archer",
         "languages": {
             "common": {
                 "rank": 5,
@@ -53,12 +55,142 @@ PREGEN_DUNGEON_1 = {
         },
         "speed": 6,
         "resources": {
-            "social": 15,
+            "social": 20,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "swords": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "animal husbandry": {
+                "rank": 2,
+                "lxpl": 300
+            },
+            "command": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "scavenger": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "half-elf scout": {
+        "race": "elf",
+        "class": "supporter",
+        "concept": "half-elf scout",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "elven": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1200,
+            "gold": 23
+        },
+        "d1_skills": {
+            "bows": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "survival": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "half-elf archer": {
+        "race": "elf",
+        "class": "adventurer",
+        "concept": "half-elf archer",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "elven": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
             "military": 20,
             "economic": 5
         },
         "currency": {
-            "silver": 1200,
+            "silver": 300,
             "gold": 13
         },
         "d1_skills": {
