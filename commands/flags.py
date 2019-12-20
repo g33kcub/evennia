@@ -43,7 +43,7 @@ class Flags(default_cmds.MuxCommand):
             output += "|113=|n" * 78 + "\n"
             output += "|540*|n Use |wflags/info <flag>|n for more information."
             caller.msg(output.strip())
-        
+         
         # If there's no switches, no equal sign and a target
         elif self.args and not self.rhs and not self.switches:
             tar = caller.search(self.args)
@@ -124,7 +124,7 @@ class Flags(default_cmds.MuxCommand):
                     else: caller.msg("Permission denied.")
                 else: caller.msg("I can't find that flag.  Type '|wflags|n' for a list of flags.")
 
-        # Unknown switch
+        # Unknown Request
         else: caller.msg("I don't recongize that request.")
 
 
