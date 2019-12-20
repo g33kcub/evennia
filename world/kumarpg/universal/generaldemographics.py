@@ -31,6 +31,7 @@ def universal_demographics(character):
     System Shit!
     """
     character.db.ooc_currency = 0
+    character.db.speed = 5
     """
     Cosmetic Crap!
     """
