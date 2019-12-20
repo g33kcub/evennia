@@ -5,17 +5,17 @@ from world.utilities.format import columns, header
 class Flags(default_cmds.MuxCommand):
     """
     Manage flags on in-game objects.  As well as offering aditional
-    information about the @flags system.
+    information about the flags system.
 
     Usage:
-        @flags[/switch] [<target>]  -   get a list of flags set on the object, 
+        flags[/switch] [<target>]  -   get a list of flags set on the object, 
             or globally if no object is specified.
 
-        @flags <target> =  [!]<flag> [<flag>]   -   perform an action on an 
-            object's flags.
+        flags <target> = [!]<flag> [<flag>] - perform an action on an object's 
+            flags. The system can process multiple flag additions andremovals 
+            at once.
     
     Switches:
-        /list   - List all of the flags currently available in the system.
         /info   - Get info about a flag. 
     """
     key = "flags"
