@@ -29,7 +29,7 @@ Inojin Alpha - 3 Skill Choices
 """
 
 PREGEN_DUNGEON_1 = {
-        "inojin alpha": {
+    "inojin alpha": {
         "race": "inojin",
         "class": "adventurer",
         "concept": "inojin alpha",
@@ -66,7 +66,7 @@ PREGEN_DUNGEON_1 = {
         "speed": 6,
         "resources": {
             "social": 10,
-            "military": 250,
+            "military": 20,
             "economic": 5
         },
         "currency": {
@@ -74,18 +74,10 @@ PREGEN_DUNGEON_1 = {
             "gold": 10
         },
         "d1_skills": {
-            "armor smith": {
-                "rank": 1,
+            "staves": {
+                "rank": 3,
                 "lxpl": 300
             },
-            "weapon smith": {
-                "rank": 2,
-                "lxpl": 300
-            },
-            "black smith": {
-                "rank": 1,
-                "lxpl": 300
-            }
         },
         "d1_abilities": {
             "night sight": {
@@ -288,10 +280,10 @@ PREGEN_DUNGEON_1 = {
             }
         }
     },
-    "pixie dagger dancer": {
+    "pixie gatherer": {
         "race": "pixie",
-        "class": "adventurer",
-        "concept": "pixie dagger dancer",
+        "class": "citizen",
+        "concept": "pixie gatherer",
         "languages": {
             "common": {
                 "rank": 5,
@@ -474,10 +466,10 @@ PREGEN_DUNGEON_1 = {
             }
         }
     },
-    "half-elf archer": {
+    "half-elf beastmaster": {
         "race": "elf",
-        "class": "adventurer",
-        "concept": "half-elf archer",
+        "class": "citizen",
+        "concept": "half-elf beastmaster",
         "languages": {
             "common": {
                 "rank": 5,
