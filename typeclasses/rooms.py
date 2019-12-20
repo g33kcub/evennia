@@ -64,9 +64,13 @@ class Room(DefaultRoom):
             default_desc = trail("use |wshortdesc <desc>|n to set this. Message.", length=45)  
             short_desc = trail(target.db.short_desc, length=45) if target.db.short_desc else default_desc
 
-            # idle time
+            # idle time.  Just show the looker 0s as time shows time since last command.
             session = target.account.sessions.get()[0]
-            idle = display_time(time.time() - session.cmd_last_visible)
+            if target == looker:
+                idle = display_time(0)    
+            else:
+                idle = display_time(time.time() - session.cmd_last_visible)
+            
             output = name + short_desc + trail(idle,length=15, dir="right")
             return output + "\n"
 

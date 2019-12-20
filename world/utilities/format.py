@@ -55,10 +55,13 @@ def display_time(seconds):
     MINUTE = (N - (HOUR * hour)) // min
     SECONDS = N - ((HOUR * hour) + (MINUTE * min))
     
-    if DAY: container.append("%sd" % DAY)
-    if HOUR: container.append( "%sh" % HOUR)
-    if MINUTE: container.append("%sm" % MINUTE)
-    if seconds: container.append( "%ss" % SECONDS)
+    if N == 0: return "0s"
+    else: 
+        if DAY: container.append("%sd" % DAY)
+        if HOUR: container.append( "%sh" % HOUR)
+        if MINUTE: container.append("%sm" % MINUTE)
+        if seconds: container.append( "%ss" % SECONDS)
+    
     
     return " ".join(container[:2]) + "|n"
 

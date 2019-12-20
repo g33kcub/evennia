@@ -2,6 +2,13 @@ from evennia import default_cmds
 from world.kumarpg.dicts.flags import flags
 from world.utilities.format import columns, header
 
+def _alias_to_flag(alias):
+    for f in flags:
+        if alias in flags[f]["aliases"]: return f
+        elif alias[1:] in flags[f]["aliases"]: return "!%s" % f
+    return alias
+
+
 class Flags(default_cmds.MuxCommand):
     """
     Manage flags on in-game objects.  As well as offering aditional
@@ -22,13 +29,6 @@ class Flags(default_cmds.MuxCommand):
     aliases = ["flgs"]
     help_category = "general"
     locks = "cmd:perm(newbie)"
-
-
-    def _alias_to_flag(self, alias):
-        for f in flags:
-            if alias in flags[f]["aliases"]: return f
-            elif alias[1:] in flags[f]["aliases"]: return "!%s" % f
-        return alias
 
     def func(self):
         # Just making a shortcut.
@@ -67,7 +67,7 @@ class Flags(default_cmds.MuxCommand):
             if tar and tar.flags:
                 flgs = self.rhs.split()
                 for f in flgs:
-                    f_name = self._alias_to_flag(f)
+                    f_name = _alias_to_flag(f)
                     
                     # Set the lock strings
                     try:
@@ -105,13 +105,13 @@ class Flags(default_cmds.MuxCommand):
             else:
 
                 # If the flag (or alias) matches continue.
-                if  self._alias_to_flag(self.args.lower()) in flags:
-                    flgs = flags[self._alias_to_flag(self.args.lower())]
+                if  _alias_to_flag(self.args.lower()) in flags:
+                    flgs = flags[_alias_to_flag(self.args.lower())]
                     lock = flgs["set"] or "perm(player)"
                     
                     # Only show locks that they have access.
                     if caller.locks.check_lockstring(caller, "dummy:{}".format(lock)):
-                        output = header(f" |wFlag:|n {self._alias_to_flag(self.args).upper()} ", fill="|113=|n")
+                        output = header(f" |wFlag:|n {_alias_to_flag(self.args).upper()} ", fill="|113=|n")
                         
                         output += "  |wAliases:|n " + ",".join(flgs["aliases"]) + "\n" if flgs["aliases"] else "  Aliases: \n"
                         output += "  |wCode:|n " + flgs["code"] + "\n" or "\n"
@@ -154,6 +154,32 @@ class FlagHandler(object):
             self.obj.db.flags.remove(flag.lower())
         except ValueError:
             pass
+    
+    def has(self, flag):
+        try:
+            self.obj.db.flags.index(flag.lower())
+            return True
+        except IndexError:
+            return False
+
+    def has_flags(self, flags):
+        "Check against a list of flags to see if any are set"
+        evals = []
+        for flag in flags.split():
+
+            # If the flag has the Not(!) marker, we're testing
+            # to make sure it's NOT set on the object.
+            if flag[0] == "!":
+                if self.has(_alias_to_flag(flag[1:])):evals.append(False)
+                else: evals.append(True)
+            else:
+                if self.has(_alias_to_flag(flag)): evals.append(True)
+                else: evals.append(False)
+                
+        # Now we test the eval list to make sure there are no 
+        # False responses.
+        if False in evals: return False
+        else: return True
     
     def clear(self):
         self.obj.db.flags.clear()
