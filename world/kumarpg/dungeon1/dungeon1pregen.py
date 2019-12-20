@@ -12,9 +12,68 @@ Elven Enchanter - 4 skill choices.
 Human Warrior - 3 Skill Choices.
 Human Paladin - 4 Skill Choices.
 Human Guild Associate - 4 skill choices.
+
+Half-Elf Archer - 3 skill Choices.
 """
 
 PREGEN_DUNGEON_1 = {
+    "elven swordsman": {
+        "race": "elf",
+        "class": "adventurer",
+        "concept": "elven swordsman",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "elven": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 15,
+            "military": 20,
+            "economic": 5
+        },
+        "currency": {
+            "silver": 1200,
+            "gold": 13
+        },
+        "d1_skills": {
+            "bows": {
+                "rank": 2,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
     "elven swordsman": {
         "race": "elf",
         "class": "adventurer",
