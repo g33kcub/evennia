@@ -36,6 +36,7 @@ def universal_stats(character):
     }
 
     character.db.skills = {
+        "skill": skill_dict,
         "persuasion": skill_dict_social,
         "haggling": skill_dict_social,
         "intimidation": skill_dict_social,

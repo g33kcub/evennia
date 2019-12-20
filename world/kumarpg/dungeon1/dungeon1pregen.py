@@ -16,9 +16,199 @@ Human Guild Associate - 4 skill choices.
 Half-Elf Archer - 3 skill Choices.
 Half-Elf Scout -  4 Skill choices.
 Half-Elf Beastmaster - 4 Skill Choices.
+
+Pixie Dagger Dancer - 3 Skill Choices.
+Pixie Trickster - 4 skill choices
+Pixie Gatherer - 4 skill choices
 """
 
 PREGEN_DUNGEON_1 = {
+    "pixie dagger dancer": {
+        "race": "pixie",
+        "class": "adventurer",
+        "concept": "pixie dagger dancer",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "sylvan": {
+                "rank": 5,
+            }
+        },
+        "size": "tiny",
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 9,
+        "resources": {
+            "social": 20,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "survival": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "scanvenger": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "foraging": {
+                "rank": 2,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "flight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "pixie trickster": {
+        "race": "pixie",
+        "class": "supporter",
+        "concept": "pixie trickster",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "sylvan": {
+                "rank": 5,
+            }
+        },
+        "size": "tiny",
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 9,
+        "resources": {
+            "social": 10,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1200,
+            "gold": 23
+        },
+        "d1_skills": {
+            "knives": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "stealth": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "flight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "pixie dagger dancer": {
+        "race": "pixie",
+        "class": "adventurer",
+        "concept": "pixie dagger dancer",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "sylvan": {
+                "rank": 5,
+            }
+        },
+        "size": "tiny",
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 9,
+        "resources": {
+            "social": 10,
+            "military": 20,
+            "economic": 5
+        },
+        "currency": {
+            "silver": 1200,
+            "gold": 13
+        },
+        "d1_skills": {
+            "knives": {
+                "rank": 2,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "flight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
     "half-elf archer": {
         "race": "elf",
         "class": "adventurer",
