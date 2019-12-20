@@ -5,8 +5,9 @@ There will be one for each race and each class so a total of 21 total.
 Human, Half-Elf, Elf, Pixie, Inojin, Nekojin & Dwarf
 Adventurer, Supporter & Citizen
 
-Elven Swordsman
-Elven Priest
+Elven Swordsman - 3 Skill Choices.
+Elven Priest - 4 skill choices.
+Elven Enchanter - 4 skill choices.
 """
 
 PREGEN_DUNGEON_1 = {
