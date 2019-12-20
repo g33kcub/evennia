@@ -38,7 +38,7 @@ class Flags(default_cmds.MuxCommand):
         if not self.args and not self.switches:
             filter_flags = [f for f in flags if caller.locks.check_lockstring(caller, "dummy:{}".format(flags[f]["set"]))]
             frmt_flags = map(lambda x: f"{x.upper()}({flags[x]['code']})", filter_flags)
-            output =  header("|w flags Database (alias) |n", fill="|113=|n")
+            output =  header("|w flags Database |n", fill="|113=|n")
             output += columns("|".join(frmt_flags), cols=2, offset=2, sep="|") + "\n"
             output += "|113=|n" * 78 + "\n"
             output += "|540*|n Use |wflags/info <flag>|n for more information."
@@ -46,7 +46,18 @@ class Flags(default_cmds.MuxCommand):
         
         # If there's no switches, no equal sign and a target
         elif self.args and not self.rhs and not self.switches:
-            filter_flags = [f for f in flags ]
+            tar = caller.search(self.args)
+            
+            # Make sure the setter has control over the object.
+            if tar and tar.access(caller, "control"):
+                filter_flags = [f for f in tar.db.flags if caller.locks.check_lockstring(caller, "dummy:{}".format(flags[f]["set"]))]
+                frmt_flags = map(lambda x: f"{x.upper()}({flags[x]['code']})", filter_flags)
+                output =  header("|w Flags for {} |n".format(tar.name), fill="|113=|n")
+                output += columns("|".join(frmt_flags), cols=2, offset=2, sep="|") + "\n"
+                output += "|113=|n" * 78 + "\n"
+                output += "|540*|n Use |wflags/info <flag>|n for more information."
+                caller.msg(output.strip())
+            else: caller.msg("Permission denied.")
         
         # There was a left and right hand side given.
         elif self.lhs and self.rhs:
