@@ -1,0 +1,32 @@
+==============================================================================
+Name: Seamus P Wirrel                   Class: Adventurer
+Race: Elf                               Familia: Ares
+Concept: Elven Archer                   Gender: Male
+Approval Status: Approved             
+[ Attributes ]------------------------------------------[ Derived Attributes ]
+Air:           F(XXXX)    [..........]  Force:         F(XXXX)    [..........]
+Earth:         F(XXXX)    [..........]  Focus:         F(XXXX)    [..........]
+Fire:          F(XXXX)    [..........]  Finesse:       F(XXXX)    [..........]
+Water:         F(XXXX)    [..........]  Speed:         5
+Void:          F(XXXX)    [..........]  Size:          Medium
+[ Skills ]-------------------------------------------------------[ Abilities ]
+Swords:        F(XXXX)    [..........]  Night Sight    F(XXXX)    [..........]
+Stealth:       -(XXXX)    [----......]  Swordmaster    -(XXXX)    [---------.]
+[ Pools ]--------------------------------------------------------[ Languages ]
+Action:    [                         ]  Common         A(XXXX)    [---MAX----]
+Ego:       [                         ]
+Fatigue:   [                         ]
+Health:    [                         ]
+Mana:      [                         ]
+==============================================================================
+*** Notes ***
+The (XXXX) is their current LXP, but only Staff Can see this. 
+The [........] is the precent to next level, but only Staff Can see this. 
+Those skills marked with a -(XXXX) are ones that are not learned yet. only Staff can see this. 
+The bars are using the health bar. And have their numbers in them. 100/100 etc.
+Action is: Yellow (Any shade pleasing.)
+Mana is: Blue (Any shade pleasing.)
+Health is: Red (Any shade pleasing.)
+Fatigue is: Green (Any shade pleasing.)
+Ego is any color that you deem pleasing.
+The [---MAX----] is shown only when the skill can not learn more levels.
