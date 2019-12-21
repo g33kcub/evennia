@@ -1,6 +1,6 @@
 """
 This file contains the pregenned stats for all the dungeon 1 characters. 
-There will be one for each race and each class so a total of 21 total.
+There will be one for each race and each cls so a total of 21 total.
  
 Human, Half-Elf, Elf, Pixie, Inojin, Nekojin & Dwarf
 Adventurer, Supporter & Citizen
@@ -33,7 +33,7 @@ Inojin Void Stalker - 4 Skill Choices
 PREGEN_DUNGEON_1 = {
     "inojin void stalker": {
         "race": "inojin",
-        "class": "supporter",
+        "cls": "supporter",
         "concept": "inojin void stalker",
         "languages": {
             "common": {
@@ -94,7 +94,7 @@ PREGEN_DUNGEON_1 = {
     },
     "inojin alpha": {
         "race": "inojin",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "inojin alpha",
         "languages": {
             "common": {
@@ -151,7 +151,7 @@ PREGEN_DUNGEON_1 = {
     },
     "dwarven smith": {
         "race": "dwarf",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "dwarven smith",
         "languages": {
             "common": {
@@ -221,7 +221,7 @@ PREGEN_DUNGEON_1 = {
     },
     "dwarven shield bearer": {
         "race": "dwarf",
-        "class": "supporter",
+        "cls": "supporter",
         "concept": "dwarven sheild bearer",
         "languages": {
             "common": {
@@ -283,7 +283,7 @@ PREGEN_DUNGEON_1 = {
     },
     "dwarven berserker": {
         "race": "dwarf",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "dwarven berserker",
         "languages": {
             "common": {
@@ -345,7 +345,7 @@ PREGEN_DUNGEON_1 = {
     },
     "pixie gatherer": {
         "race": "pixie",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "pixie gatherer",
         "languages": {
             "common": {
@@ -411,7 +411,7 @@ PREGEN_DUNGEON_1 = {
     },
     "pixie trickster": {
         "race": "pixie",
-        "class": "supporter",
+        "cls": "supporter",
         "concept": "pixie trickster",
         "languages": {
             "common": {
@@ -473,7 +473,7 @@ PREGEN_DUNGEON_1 = {
     },
     "pixie dagger dancer": {
         "race": "pixie",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "pixie dagger dancer",
         "languages": {
             "common": {
@@ -531,7 +531,7 @@ PREGEN_DUNGEON_1 = {
     },
     "half-elf beastmaster": {
         "race": "elf",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "half-elf beastmaster",
         "languages": {
             "common": {
@@ -600,7 +600,7 @@ PREGEN_DUNGEON_1 = {
     },
     "half-elf scout": {
         "race": "elf",
-        "class": "supporter",
+        "cls": "supporter",
         "concept": "half-elf scout",
         "languages": {
             "common": {
@@ -661,7 +661,7 @@ PREGEN_DUNGEON_1 = {
     },
     "half-elf archer": {
         "race": "elf",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "half-elf archer",
         "languages": {
             "common": {
@@ -718,7 +718,7 @@ PREGEN_DUNGEON_1 = {
     },
     "elven swordsman": {
         "race": "elf",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "elven swordsman",
         "languages": {
             "common": {
@@ -775,7 +775,7 @@ PREGEN_DUNGEON_1 = {
     },
     "elven priest": {
         "race": "elf",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "elven priest",
         "languages": {
             "common": {
@@ -836,7 +836,7 @@ PREGEN_DUNGEON_1 = {
     },
     "elven enchanter": {
         "race": "elf",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "elven enchanter",
         "languages": {
             "common": {
@@ -901,7 +901,7 @@ PREGEN_DUNGEON_1 = {
     },
     "human warrior": {
         "race": "human",
-        "class": "adventurer",
+        "cls": "adventurer",
         "concept": "human warrior",
         "languages": {
             "common": {
@@ -958,7 +958,7 @@ PREGEN_DUNGEON_1 = {
     },
     "human paladin": {
         "race": "human",
-        "class": "supporter",
+        "cls": "supporter",
         "concept": "human paladin",
         "languages": {
             "common": {
@@ -1015,7 +1015,7 @@ PREGEN_DUNGEON_1 = {
     },
     "human guild associate": {
         "race": "human",
-        "class": "citizen",
+        "cls": "citizen",
         "concept": "human guild associate",
         "languages": {
             "common": {

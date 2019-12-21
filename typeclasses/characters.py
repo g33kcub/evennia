@@ -15,7 +15,6 @@ from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
 from world.kumarpg.universal.generaldemographics import universal_demographics
 from world.kumarpg.universal.generalstats import universal_stats
 
-rplanguage.add_language()
 
 class Character(DefaultCharacter):
     """

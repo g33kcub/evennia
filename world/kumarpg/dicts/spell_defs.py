@@ -151,7 +151,7 @@ SPELLS = {
         "accuracy": 100,
         "max_hp": 15,
         "min_dmg": 0,
-        "status": "protect"
+        "status": "protect",
         "status_duration": 999,
         "status_chance": 100,
         "desc_start": "A ruby colored bubble",
