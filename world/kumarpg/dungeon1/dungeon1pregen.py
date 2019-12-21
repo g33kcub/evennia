@@ -26,9 +26,72 @@ Dwarven Shield Bearer - 4 Skill Choices
 Dwarven Smith - 4 skill choices.
 
 Inojin Alpha - 3 Skill Choices
+Inojin Void Stalker - 4 Skill Choices
+
 """
 
 PREGEN_DUNGEON_1 = {
+    "inojin void stalker": {
+        "race": "inojin",
+        "class": "supporter",
+        "concept": "inojin void stalker",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "caninonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1500,
+            "gold": 20
+        },
+        "d1_skills": {
+            "knives": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "shadow weapon": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
     "inojin alpha": {
         "race": "inojin",
         "class": "adventurer",
