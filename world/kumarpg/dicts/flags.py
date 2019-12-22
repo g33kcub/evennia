@@ -50,5 +50,19 @@ flags = {
         "set": "perm(player)",
         "unset": "perm(player)",
         "desc": "A flag to denote that a character is dead."
+    },
+    "troublemaker": {
+        "aliases": ['suspect'],
+        "code": "t",
+        "set": "perm(developer)",
+        "unset": "perm(developer)",
+        "desc": "A flag to denote a player that is known to cause problems."
+    },
+    "nogamemaster": {
+        "aliases": ['nogmmed','no_gm_scene'],
+        "code": "n",
+        "set": "perm(admin)",
+        "unset": "perm(admin)",
+        "desc": "A flag to denote a player that cannot take part in Game Master Ran Scenes."
     }
 }
