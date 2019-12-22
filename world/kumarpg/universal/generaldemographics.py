@@ -41,7 +41,7 @@ def universal_demographics(character):
     Hidden Stats (Never Shown to Anyone)
     """
     character.db.pool_action = {"max": 0, "cur": 0}
-    #character.locks.add("examine:perm(Developer);tell:all();delete:perm(Developer);edit:perm(Developer)")
+    character.locks.add("examine:perm(Developer);tell:all();delete:perm(Developer);edit:perm(Developer)")
     """
     Equipment Stuff
     """
