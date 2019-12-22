@@ -26,6 +26,7 @@ def wrap(string="", width=78):
     output += line
     return output
 
+
 def columns(string, sep=" ", cols=2, delim=" ", offset=0):
     "Split a string into columns"
     output = ""
@@ -41,6 +42,7 @@ def columns(string, sep=" ", cols=2, delim=" ", offset=0):
             output += "\n" + trail(delim * offset + word, length=length, delim=delim)
             count = 1
     return output
+
 
 def display_time(seconds):
     "Format the idle time of players from seconds into (d h m s) format."
@@ -61,9 +63,9 @@ def display_time(seconds):
         if HOUR: container.append( "%sh" % HOUR)
         if MINUTE: container.append("%sm" % MINUTE)
         if seconds: container.append( "%ss" % SECONDS)
-    
-    
-    return " ".join(container[:2]) + "|n"
+
+    return " ".join(container[:2]) + "|n" if not DAY else "".join(container[:1])
+
 
 def trail(string, length=26, tail="...", dir ="left", delim=" "):
     l = length - len(tail)
@@ -72,3 +74,7 @@ def trail(string, length=26, tail="...", dir ="left", delim=" "):
         if dir.lower() == 'left': return string + delim * (length - len(strip_ansi(string)))
         else: return  delim * (length - len(strip_ansi(string))) + string
     else: return string[:l] + tail
+
+
+def cap_str(string):
+    return " ".join(map(lambda x: "".join(x[0].upper() + x[1:]), string.split()))

@@ -45,7 +45,7 @@ class Cmd_Short_Desc(Command):
     """
 
     key = "shortdesc"
-    help_Category = "general"
+    help_category = "general"
 
     def func(self):
         "this performs the actual command"

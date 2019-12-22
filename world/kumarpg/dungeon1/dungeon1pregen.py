@@ -39,6 +39,9 @@ PREGEN_DUNGEON_1 = {
         "race": "nekojin",
         "cls": "citizen",
         "concept": "nekojin merchant",
+        "desc": "We can have a few lines worth of description for each of the pregen templates.  If it's going to \
+                be a long string you can break it up with a slash for mutiple lines to retain file readability!\
+                It won't do anything to the end formatting.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -448,9 +451,11 @@ PREGEN_DUNGEON_1 = {
         }
     },
     "dwarven smith": {
+        "key": "Dwarven Smith",
         "race": "dwarf",
         "cls": "citizen",
-        "concept": "dwarven smith",
+        "concept": "a dwarven smith",
+        "desc": "This is a sample description to be switched out later",
         "languages": {
             "common": {
                 "rank": 5,
@@ -496,7 +501,9 @@ PREGEN_DUNGEON_1 = {
             "hammers": {
                 "rank": 1,
                 "lxpl": 300
-            },
+            }
+        },
+        "skills": {
             "armor smith": {
                 "rank": 1,
                 "lxpl": 300
@@ -524,9 +531,13 @@ PREGEN_DUNGEON_1 = {
         }
     },
     "dwarven shield bearer": {
+        "key": "Dwarven Shield Bearer",
         "race": "dwarf",
         "cls": "supporter",
-        "concept": "dwarven sheild bearer",
+        "concept": "a dwarven sheild bearer",
+        "desc": "This is a temporary description to show what it looks like when the \
+                text wraps lines in both the menu and what it looks like to add/edit \
+                multiline text in the pregen file.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -578,6 +589,7 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 500
             }
         },
+        "skills": {},
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
@@ -597,9 +609,11 @@ PREGEN_DUNGEON_1 = {
         }
     },
     "dwarven berserker": {
+        "key": "Dwarven Berserker",
         "race": "dwarf",
         "cls": "adventurer",
-        "concept": "dwarven berserker",
+        "concept": "a dwarven berserker",
+        "desc": "This is a temporary description until something cannon can be put into place!",
         "languages": {
             "common": {
                 "rank": 5,
@@ -651,6 +665,7 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 300
             }
         },
+        "skills": {},
         "d1_abilities": {
             "night sight": {
                 "rank": 1,

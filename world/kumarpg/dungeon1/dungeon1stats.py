@@ -9,12 +9,9 @@ This is the stat file for Dungeon 1.
 
 
 def dungeon1_stats(character):
-
+    """ Set base D1 stats/skills/magic/abilities """
     character.db.d1_stats = stats
-
     character.db.d1_skills = weapons
-
     character.db.d1_magic = spells
-
     character.db.d1_abilities = abilities
 

@@ -6,9 +6,9 @@ Rooms are simple containers that has no location of their own.
 """
 
 from evennia import DefaultRoom
-from evennia.utils.ansi import strip_ansi
 from collections import defaultdict
 from commands.flags import FlagHandler
+from commands.chargen import CmdsetChargen
 import time
 from world.utilities.format import columns, wrap, header, display_time, trail
 
@@ -111,7 +111,8 @@ class Room(DefaultRoom):
         # Description
         string += "You See Nothing Special\n" if not self.db.desc else wrap(self.db.desc) + "\n"
         # Secondary Description
-        if self.db.sec_desc: string += "\n" + wrap("%s" % self.db.sec_desc) + "\n"
+        if self.db.sec_desc:
+            string += "\n" + wrap("%s" % self.db.sec_desc) + "\n"
 
         # If the room is set to blind, test to see if the looker can see contents or not.
         if not self.db.is_blind or self.locks.check_lockstring(looker, "dummy:perm(builder)"):
@@ -121,7 +122,8 @@ class Room(DefaultRoom):
 
             # Character section    
             string += header("|w Characters ")
-            for user in users: string += self.detail_string(user, looker)
+            for user in users:
+                string += self.detail_string(user, looker)
 
             # Exits
             for exit in exits:
@@ -161,3 +163,9 @@ class Outside(Room):
     def at_object_creation(self):
         self.db.type = "outside"
         return super().at_object_creation()
+
+
+class Chargen(Room):
+    def at_object_creation(self):
+        super().at_object_creation()
+        self.cmdset.add(CmdsetChargen, permanent=True)
