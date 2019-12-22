@@ -36,11 +36,11 @@ class Character(DefaultCharacter):
     at_post_puppet - Echoes "AccountName has entered the game" to the room.
 
     """
-"""
+    """
     @property
     def flags(self):
         return FlagHandler(self)
-"""
+    """
     def at_object_creation(self):
         super().at_object_creation()
         """
