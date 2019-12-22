@@ -47,8 +47,8 @@ flags = {
     "isdead": {
         "aliases": ['dead'],
         "code": "d",
-        "set": "perm(player)",
-        "unset": "perm(player)",
+        "set": "perm(staff)",
+        "unset": "perm(staff)",
         "desc": "A flag to denote that a character is dead."
     },
     "troublemaker": {
