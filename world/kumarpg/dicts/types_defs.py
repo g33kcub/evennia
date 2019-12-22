@@ -1,6 +1,7 @@
 types = {
     "lang_dict": {"rank": 0, "lxp": 0, "lxpl": 0, "cor": 0},
     "ability_dict": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False},
+    "class_ability_dict": {"rank": 1, "lxp": 0, "mp": 0, "lxpl": 500, "cor": 1, "hl": True},
     "stat_dict": {"rank": 1, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0},
     "magic_dict": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False},
     "skill_dict": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False, "type": 0},

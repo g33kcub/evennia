@@ -96,7 +96,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -157,7 +163,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -214,7 +231,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -279,7 +302,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -340,7 +369,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -397,7 +437,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -467,7 +513,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -529,7 +581,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -591,7 +654,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -657,7 +726,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "flight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -719,7 +794,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "flight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -777,7 +863,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "flight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -846,7 +938,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -907,7 +1005,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -964,7 +1073,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -1021,13 +1136,19 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
     "elven priest": {
         "race": "elf",
-        "cls": "citizen",
+        "cls": "supporter",
         "concept": "elven priest",
         "languages": {
             "common": {
@@ -1082,7 +1203,18 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -1147,7 +1279,13 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -1205,6 +1343,12 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "adaptive": {
                 "rank": 4,
+                "hl": True
+            },
+            "battle sense": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -1262,6 +1406,17 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "adaptive": {
                 "rank": 4,
+                "hl": True
+            },
+            "waymarks": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
+            },
+            "waymark recall": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     },
@@ -1323,6 +1478,12 @@ PREGEN_DUNGEON_1 = {
         "d1_abilities": {
             "adaptive": {
                 "rank": 4,
+                "hl": True
+            },
+            "blissful ignorance": {
+                "rank": 1,
+                "lxpl": 500,
+                "hl": True
             }
         }
     }
