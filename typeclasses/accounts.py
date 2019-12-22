@@ -92,8 +92,9 @@ class Account(DefaultAccount):
 
     """
     def at_account_creation(self):
-       self.db.mails = []
-       self.db.readmails = set()
+        super().at_account_creation()
+        self.db.mails = []
+        self.db.readmails = set()
 
 
 

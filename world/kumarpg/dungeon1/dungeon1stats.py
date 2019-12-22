@@ -9,15 +9,12 @@ This is the stat file for Dungeon 1.
 
 
 def dungeon1_stats(character):
-    for stat in stats:
-        character.db.d1_stats[stat] = stats[stat]
 
-    for weapon in weapons:
-        character.db.d1_skills[weapon] = weapons[weapon]
+    character.db.d1_stats = stats
 
-    for spell in spells:
-        character.db.d1_magic[spell] = spells[spell]
+    character.db.d1_skills = weapons
 
-    for ability in abilities:
-        character.db.d1_abilities[ability] = abilities[ability]
+    character.db.d1_magic = spells
+
+    character.db.d1_abilities = abilities
 

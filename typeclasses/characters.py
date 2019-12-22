@@ -9,6 +9,7 @@ creation commands.
 """
 from evennia import DefaultCharacter
 from evennia.contrib import rplanguage
+from evennia.utils.utils import lazy_property
 from commands.flags import FlagHandler
 from world.kumarpg.dungeon1.dungeon1demographics import dungeon1_demographics
 from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
@@ -37,7 +38,7 @@ class Character(DefaultCharacter):
 
     """
 
-    @property
+    @lazy_property
     def flags(self):
         return FlagHandler(self)
   
