@@ -4,7 +4,7 @@ It is broken up based on stat type.
 These are the defaults required.
 """
 
-LXP_ATTRIBUTES {
+LXP_ATTRIBUTES = {
     "1": 100,
     "2": 500,
     "3": 500,
@@ -17,7 +17,7 @@ LXP_ATTRIBUTES {
     "10": 2500
 }
 
-LXP_ABILITIES {
+LXP_ABILITIES = {
     "1": 100,
     "2": 500,
     "3": 500,
@@ -30,7 +30,7 @@ LXP_ABILITIES {
     "10": 2500
 }
 
-LXP_SKILLS {
+LXP_SKILLS = {
     "1": 100,
     "2": 300,
     "3": 300,
@@ -43,7 +43,7 @@ LXP_SKILLS {
     "10": 1200
 }
 
-LXP_MAGIC {
+LXP_MAGIC = {
     "1": 250,
     "2": 500,
     "3": 500,

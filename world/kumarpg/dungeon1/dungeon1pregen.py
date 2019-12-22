@@ -27,10 +27,262 @@ Dwarven Smith - 4 skill choices.
 
 Inojin Alpha - 3 Skill Choices
 Inojin Void Stalker - 4 Skill Choices
+Inojin Cartographer - 4 Skill choices.
 
+Nekojin Dominator - 3 Skill Choices.
+Nekojin Druid - 4 Skill Choices
+Nekojin Merchant - 4 Skill Choices.
 """
 
 PREGEN_DUNGEON_1 = {
+    "nekojin merchant": {
+        "race": "nekojin",
+        "cls": "citizen",
+        "concept": "nekojin merchant",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "felinonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 20,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "appraisal": {
+                "rank": 2,
+                "lxpl": 300
+            },
+            "haggling": {
+                "rank": 2,
+                "lxpl": 300
+            },
+            "whips": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "nekojin druid": {
+        "race": "nekojin",
+        "cls": "supporter",
+        "concept": "nekojin druid",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "felinonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
+            "military": 5,
+            "economic": 20
+        },
+        "currency": {
+            "silver": 1500,
+            "gold": 20
+        },
+        "d1_skills": {
+            "geobolt": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "liminal light": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "nekojin dominator": {
+        "race": "nekojin",
+        "cls": "adventurer",
+        "concept": "nekojin dominator",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "felinonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 10,
+            "military": 20,
+            "economic": 5
+        },
+        "currency": {
+            "silver": 1500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "whips": {
+                "rank": 3,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
+    "inojin cartographer": {
+        "race": "inojin",
+        "cls": "citizen",
+        "concept": "inojin cartographer",
+        "languages": {
+            "common": {
+                "rank": 5,
+            },
+            "caninonese": {
+                "rank": 5,
+            }
+        },
+        "d1_stats": {
+            "earth": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "fire": {
+                "rank": 2,
+                "lxpl": 500
+            },
+            "water": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "air": {
+                "rank": 1,
+                "lxpl": 500
+            },
+            "void": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "speed": 6,
+        "resources": {
+            "social": 20,
+            "military": 5,
+            "economic": 10
+        },
+        "currency": {
+            "silver": 500,
+            "gold": 10
+        },
+        "d1_skills": {
+            "staves": {
+                "rank": 1,
+                "lxpl": 300
+            },
+            "scribe": {
+                "rank": 3,
+                "lxpl": 300
+            },
+            "survival": {
+                "rank": 1,
+                "lxpl": 300
+            }
+        },
+        "d1_abilities": {
+            "night sight": {
+                "rank": 1,
+                "lxpl": 500
+            }
+        }
+    },
     "inojin void stalker": {
         "race": "inojin",
         "cls": "supporter",
