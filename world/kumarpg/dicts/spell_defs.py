@@ -1,3 +1,4 @@
+from world.kumarpg.dicts.spell_types import spell_attack_wild, spell_attack_status, spell_protect, spell_buff_noprotect, spell_summon
 """
 This the file where we define all the spells in the game, regardless of what dungeon they are in.
 
@@ -157,7 +158,7 @@ SPELLS = {
         "desc_start": "A ruby colored bubble",
         "desc_inc": "a ruby colored bubble",
         "cast_action": "signs"
-    }
+    },
     "phoenix weapon": {
         "spellfunction": spell_buff_noprotect,
         "cost": 3,
