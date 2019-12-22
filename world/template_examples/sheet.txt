@@ -2,7 +2,7 @@
 Name: Seamus P Wirrel                   Class: Adventurer
 Race: Elf                               Familia: Ares
 Concept: Elven Archer                   Gender: Male
-Approval Status: Approved             
+Approval Status: Approved               Dungeon: Name of Dungeon (XXXX)
 [ Attributes ]------------------------------------------[ Derived Attributes ]
 Air:           F(XXXX)    [..........]  Force:         F(XXXX)    [..........]
 Earth:         F(XXXX)    [..........]  Focus:         F(XXXX)    [..........]
