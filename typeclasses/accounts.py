@@ -91,9 +91,9 @@ class Account(DefaultAccount):
      at_server_shutdown()
 
     """
-    def at_account_creation(self):
-        self.db.mails = []
-        self.db.readmails = set()
+#   def at_account_creation(self):
+#      self.db.mails = []
+#      self.db.readmails = set()
 
 
 
