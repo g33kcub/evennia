@@ -1,24 +1,86 @@
 from random import randint
 
-def roll_hit():
-    "roll 1d100"
-    return randint(1,100)
+def calculate_hp(character):
+    """
+    This is the formula for calculating maximum HP.
+    [(Earth * 5) + racial_mod + cp_level_mod + ability_mod]
+    """
+    max_hp = 0  
+    return max_hp
 
-def roll_dmg():
-    "roll 1d6"
-    return randint(1,6)
+def calculate_mp(character):
+    """
+    This is the formula for calculating maximum MP.
+    [(Void * 5) + racial_mod + cp_level_mod + ability_mod]
+    """
+    max_mp = 0
+    return max_mp
 
-def check_defeat(character):
-    "Checks if a character has been defeated."
-    if character.db.HP <= 0:
-        character.msg("You fall down, defeated!")
-        character.db.HP = 100 #reset
+def calculate_ep(character):
+    """
+    This is the formula for calculating maximum EP.
+    [(((Water + Fire)/2) * 5) + racial_mod + cp_level_mod + ability_mod]
+    """
+    max_ep = 0
+    return max_ep
 
-def add_XP(character,amount):
-    "Add XP to a character, tracking a level increase"
-    if character.db.XP >= (character.db.level + 1) ** 2:
-        character.db.leve += 1
-        character.db.STR += 1
-        character.db.combat += 2
-        character.msg("You are now level %i!" % character.db.level)
+def calculate_fp(character):
+    """
+    This is the formula for calculating maximum FP.
+    [(((Earth + Air)/2) * 5) + racial_mod + cp_level_mod + ability_mod]
+    """
+    max_ep = 0
+    return max_ep
+
+def calculate_ap(character):
+    """
+    This is the formula for calculating maximum AP.
+    [((Earth + Air + Fire + Water + Void)/5) * 7]
+    """
+    max_ap = 0
+    return max_ap
+
+def cp_level_mod(character):
+    """
+    This function calculates the CP/Level Mod for the character.
+
+    RPGLEVEL (The character's hidden level marker.)
+    1 to 2 = 0
+    3 to 4 = 1
+    5 to 6 = 2
+    6 to 7 = 3
+    8 to 9 = 4
+    10 to 12 = 5
+    13 to 15 = 6
+    16 to 18 = 7
+    19 = 8
+    20 = 9
+    """
+    mod = 0
+    return mod
+
+def racial_mod(character, stat):
+    """
+    This provides a bonus based on the character's race.
+
+    Human: +8 to all pools.
+    Elf: +5 [HP,FP], +10 [EP], +12 [MP]
+    Half-Elf: +7 [HP,EP,FP], +11 [MP]
+    Pixie: +16 [EP,MP]
+    Dwarf: +16 [HP,FP]
+    Nekojin: +10 [HP,FP], +6 [MP,EP]
+    Inojin: +7 [HP,FP], +9 [MP,EP]
+    """
+    racial_mod = 0
+    return racial_mod
+
+def ability_mod(character, stat):
+    """
+    This function takes a look at qualifying abilities and adds them to the appropriate pools.
+    """
+    ability_mod = 0
+    return ability_mod
+
+
+
 
