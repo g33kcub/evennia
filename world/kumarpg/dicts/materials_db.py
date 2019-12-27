@@ -72,10 +72,43 @@ MATERIAL_TABLE_GLOBAL = {
     "leather, exotic": {"type": "Textile", "tier": 3, "rarity": "Rare"},
     "leather, high quality": {"type": "Textile", "tier": 2, "rarity": "Uncommon"},
     "leather, low quality": {"type": "Textile", "tier": 0, "rarity": "Very Common"},
-    
+    "magicite, amber": {"type": "Gemstone", "tier": 4, "rarity": "Rare"},
+    "magicite, diamond": {"type": "Gemstone", "tier": 4, "rarity": "Rare"},
+    "magicite, emerald": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "magicite, golden": {"type": "Gemstone", "tier": 5, "rarity": "Legendary"},
+    "magicite, obsidian": {"type": "Gemstone", "tier": 5, "rarity": "Legendary"},
+    "magicite, opal": {"type": "Gemstone", "tier": 6, "rarity": "Unique"},
+    "magicite, ruby": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "magicite, sapphire": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "magicite, topaz": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "magicite, unformed": {"type": "Gemstone", "tier": 2, "rarity": "Uncommon"},
+    "meat": {"type": "Ingredient", "tier": 1, "rarity": "Common"},
+    "meat, exotic": {"type": "Ingredient", "tier": 3, "rarity": "Rare"},
+    "meat, high quality": {"type": "Ingredient", "tier": 2, "rarity": "Uncommon"},
+    "meat, low quality": {"type": "Ingredient", "tier": 0, "rarity": "Common"},
+    "meat, luxury": {"type": "Ingredient", "tier": 4, "rarity": "Legendary"},
+    "metal, low quality": {"type": "Metal", "tier": 0, "rarity": "Very Common"},
+    "metal, luxury": {"type": "Metal", "tier": 4, "rarity": "Rare"},
+    "metal, precious": {"type": "Metal", "tier": 3, "rarity": "Rare"},
+    "metal, semiprecious": {"type": "Metal", "tier": 2, "rarity": "Uncommon"},
+    "oil": {"type": "Ingredient", "tier": 1, "rarity": "Common"},
+    "oil, exotic": {"type": "Ingredient", "tier": 3, "rarity": "Rare"},
+    "oil, high quality": {"type": "Ingredient", "tier": 2, "rarity": "Uncommon"},
+    "oil, low quality": {"type": "Ingredient", "tier": 0, "rarity": "Very Common"},
+    "oil, luxury": {"type": "Ingredient", "tier": 4, "rarity": "Rare"},
+    "pearl": {"type": "Gemstone", "tier": 1, "rarity": "Uncommon"},
+    "pearl, black": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "pearl, blue": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "pearl, gold": {"type": "Gemstone", "tier": 4, "rarity": "Epic"},
+    "pearl, lavender": {"type": "Gemstone", "tier": 4, "rarity": "Rare"},
+    "pearl, pink": {"type": "Gemstone", "tier": 3, "rarity": "Rare"},
+    "pearl, rainbow": {"type": "Gemstone", "tier": 4, "rarity": "Legendary"},
+}
+
+MATERIAL_TABLE_VENDOR = {
+
 }
 
 MATERIAL_TABLE_D1 = {
-    "egg, chimera": {"type": "Ingredient", "tier": 5, "rarity": "Rare"},
-    "egg, deep serpent": {"type": "Ingredient", "tier": 5, "rarity": "Epic"},
+
 }
