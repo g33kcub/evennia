@@ -26,5 +26,8 @@ abilities = {
     "swift striking": types["ability_dict"],
     "extended weight limit": types["ability_dict"],
     "hyper combat awareness": types["ability_dict"],
-    "mage sight": types["ability_dict"]
+    "mage sight": types["ability_dict"],
+    "stealth": types["ability_dict"],
+    "listening": types["ability_dict"],
+    
 }
