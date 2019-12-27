@@ -5,53 +5,35 @@ Materials are limited to a specific dungeon, will be statted as such.
 
 Material Formatting:
 
-NAME      = STR = A bit obvious.
 Tier      = INT = This determines the generic value of it when combined with rarity.
 Rarity    = STR = How often it is found during the month cycle. 
-Table     = []  = Global, D1, D2, etc Can be more than one. 
 TYPE      = STR = What type of material is. Plant, etc. 
-Desc      = STR = Description of it. 
-QUIRK     = STR = A list of any magical or unique properties. 
+
 """
 
-MATERIAL_TABLE = {
-    "pelt, low quality": {
-        "tier": 0,
-        "rarity": "common",
-        "table": ['Global'],
-        "type": "beast part",
-        "desc": "A pelt of any animal, though badly cut from them.",
-        "quirk": "none"
-    },
-    "pelt": {
-        "tier": 1,
-        "rarity": "common",
-        "table": ['Global'],
-        "type": "beast part",
-        "desc": "A pelt of any animal, skinned by someone with some basic skill.",
-        "quirk": "none"
-    },
-    "pelt, high quality": {
-        "tier": 2,
-        "rarity": "uncommon",
-        "table": ['Global'],
-        "type": "beast part",
-        "desc": "A pelt of any animal, skinned by someone with masterful skills.",
-        "quirk": "Adds +1 to armor made with it."
-    },
-    "pelt, exotic": {
-        "tier": 3,
-        "rarity": "rare",
-        "table": ['Global'],
-        "desc": "A pelt of a rare and exotic creature, maybe even mythical, skinned with great care.",
-        "quirk": "Adds +3 to armor made with it."
-    },
-    "wood, low quality": {
-        "tier": 0,
-        "rarity": "common",
-        "table": ['Global'],
-        "type": "wood",
-        "desc": "A piece of wood, though it is roughly hewn from its source.",
-        "quirk": "none"
-    }
+MATERIAL_TABLE_GLOBAL = {
+    "bone": {"type": "Beast Part", "tier": 1, "rarity": "Very Common"},
+    "bone, dragon": {"type": "Beast Part", "tier": 4, "rarity": "Rare"},
+    "bone, exotic": {"type": "Beast Part", "tier": 3, "rarity": "Uncommon"},
+    "cloth": {"type": "Textile", "tier": 1, "rarity": "Common"},
+    "cloth, arcane weave": {"type": "Textile", "tier": 5, "rarity": "Legendary"},
+    "cloth, exotic": {"type": "Textile", "tier": 3, "rarity": "Rare"},
+    "cloth, high quality": {"type": "Textile", "tier": 2, "rarity": "Uncommon"},
+    "cloth, low quality": {"type": "Textile", "tier": 0, "rarity": "Very Common"},
+    "cloth, luxury": {"type": "Textile", "tier": 4, "rarity": "Rare"},
+    "cloth, shadow weave": {"type": "Textile", "tier": 5, "rarity": "Legendary"},
+    "dragon glass": {"type": "Metal", "tier": 5, "rarity": "Legendary"},
+    "egg": {"type": "Ingredient", "tier": 0, "rarity": "Uncommon"},
+    "egg, dragon": {"type": "Ingredient", "tier": 5, "rarity": "Epic"},
+    "egg, exotic": {"type": "Ingredient", "tier": 2, "rarity": "Rare"},
+    "egg, luxury": {"type": "Ingredient", "tier": 3, "rarity": "Rare"},
+    "feather": {"type": "Beast Part", "tier": 1, "rarity": "Very Common"},
+    "feather, exotic": {"type": "Beast Part", "tier": 3, "rarity": "Uncommon"},
+    "feather, luxury": {"type": "Beast Part", "tier": 4, "rarity": "Rare"},
+    
+}
+
+MATERIAL_TABLE_D1 = {
+    "egg, chimera": {"type": "Ingredient", "tier": 5, "rarity": "Rare"},
+    "egg, deep serpent": {"type": "Ingredient", "tier": 5, "rarity": "Epic"},
 }
