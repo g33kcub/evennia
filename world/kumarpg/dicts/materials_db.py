@@ -46,11 +46,12 @@ MATERIAL_TABLE = {
         "desc": "A pelt of a rare and exotic creature, maybe even mythical, skinned with great care.",
         "quirk": "Adds +3 to armor made with it."
     },
-    "ice wolf pelt": {
-        "tier": 5,
-        "rarity": "rare",
-        "table": ['D1'],
-        "desc": "A blue and white furred pelt that is ice cold to the touch, it was skinned with great care.",
-        "quirk": "Armor made with this pelt gains a high resistance to ice damage."
+    "wood, low quality": {
+        "tier": 0,
+        "rarity": "common",
+        "table": ['Global'],
+        "type": "wood",
+        "desc": "A piece of wood, though it is roughly hewn from its source.",
+        "quirk": "none"
     }
 }
