@@ -57,5 +57,5 @@ D1_TITLES = {
     "chef": types["title_dict"],
     "deep wizard": types["title_dict"], #attaining one of the deep magics. 
     "the deep wizard": types["title_dict"], #the first to attain all deep magics. 
-    "arthen champion": types["title_dict"] #killing the floor boss at least once. 
+    "arthen champion": types["title_dict"] #killing every floor boss at least once. 
     }
