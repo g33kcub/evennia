@@ -54,7 +54,8 @@ D1_TITLES = {
     "barbarian": types["title_dict"],
     "invoker": types["title_dict"],
     "aristocrat": types["title_dict"],
-    "deep wizard": types["title_dict"],
-    "the deep wizard": types["title_dict"],
-    "arthen champion": types["title_dict"]
+    "chef": types["title_dict"],
+    "deep wizard": types["title_dict"], #attaining one of the deep magics. 
+    "the deep wizard": types["title_dict"], #the first to attain all deep magics. 
+    "arthen champion": types["title_dict"] #killing the floor boss at least once. 
     }
