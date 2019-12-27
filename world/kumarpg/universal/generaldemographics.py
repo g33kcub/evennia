@@ -63,5 +63,5 @@ def universal_demographics(character):
         "accessory 3": None,
         "accessory 4": None
     }
-    character.db.univeral_milestones = {}
+    character.db.universal_milestones = {}
     
