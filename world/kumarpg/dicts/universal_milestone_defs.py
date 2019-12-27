@@ -5,6 +5,5 @@ UNIVERSAL_MILESTONES = {
     "pre-alpha tester": types["milestone_dict"],
     "alpha tester": types["milestone_dict"],
     "beta tester": types["milestone_dict"],
-    "true tester": types["milestone_dict"],
-    
+    "true tester": types["milestone_dict"],    
 }

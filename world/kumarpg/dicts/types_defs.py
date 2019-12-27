@@ -14,5 +14,6 @@ types = {
     "skill_dict_crafting4": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False, "type": 3, "group": 4},
     "skill_dict_crafting5": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False, "type": 3, "group": 5},
     "skill_dict_tradesman": {"rank": 0, "lxp": 0, "mp": 0, "lxpl": 0, "cor": 0, "hl": False, "type": 4},
-    "milestone_dict": {"hl": False, "count": 0, "required": 0}
+    "milestone_dict": {"hl": False, "count": 0, "required": 0},
+    "title_dict": {"hl": False, "current": False}
 }
