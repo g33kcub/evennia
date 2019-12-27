@@ -11,5 +11,20 @@ abilities = {
     "waymarks": types["class_ability_dict"],
     "waymark recall": types["class_ability_dict"],
     "battle sense": types["class_ability_dict"],
-    "blissful ignorance": types["class_ability_dict"]
+    "blissful ignorance": types["class_ability_dict"],
+    "sprint": types["ability_dict"],
+    "dual blades": types["ability_dict"],
+    "combat initiative": types["ability_dict"],
+    "battle healing": types["ability_dict"],
+    "battle refresher": types["ability_dict"],
+    "damn healthy!": types["ability_dict"],
+    "tireless": types["ability_dict"],
+    "elegant egotist": types["ability_dict"],
+    "parry": types["ability_dict"],
+    "acrobatic defense": types["ability_dict"],
+    "berserker rage": types["ability_dict"],
+    "swift striking": types["ability_dict"],
+    "extended weight limit": types["ability_dict"],
+    "hyper combat awareness": types["ability_dict"],
+    "mage sight": types["ability_dict"]
 }
