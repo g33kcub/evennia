@@ -126,7 +126,11 @@ SPELLS = {
         "cost": 2,
         "target": "other",
         "elemental": "chaos",
-
+        "accuracy": 85,
+        "min_dmg": 2,
+        "desc_start": "A blast of rainbow energy",
+        "desc_inc": "blast of rainbow energy",
+        "cast_action": "chant"
     },
     "entropy field": {},
     "chaotic bombardment": {},
