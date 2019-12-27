@@ -30,7 +30,9 @@ MATERIAL_TABLE_GLOBAL = {
     "feather": {"type": "Beast Part", "tier": 1, "rarity": "Very Common"},
     "feather, exotic": {"type": "Beast Part", "tier": 3, "rarity": "Uncommon"},
     "feather, luxury": {"type": "Beast Part", "tier": 4, "rarity": "Rare"},
-    
+    "gemstone, imitation": {"type": "Gemstone", "tier": 0, "rarity": "Very Common"},
+    "gemstone, precious": {"type": "Gemstone", "tier": 2, "rarity": "Uncommon"},
+    "gemstone, semiprecious": {"type": "Gemstone", "tier": 1, "rarity": "Common"},
 }
 
 MATERIAL_TABLE_D1 = {
