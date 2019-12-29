@@ -9,9 +9,16 @@ Earth:         F(XXXX)    [..........]  Focus:         F(XXXX)    [..........]
 Fire:          F(XXXX)    [..........]  Finesse:       F(XXXX)    [..........]
 Water:         F(XXXX)    [..........]  Speed:         5
 Void:          F(XXXX)    [..........]  Size:          Medium
+                                        Tech Points:   XXXX/XXXX
 [ Skills ]-------------------------------------------------------[ Abilities ]
 Swords:        F(XXXX)    [..........]  Night Sight    F(XXXX)    [..........]
-Stealth:       -(XXXX)    [----......]  Swordmaster    -(XXXX)    [---------.]
+  Heavy Swing           X [..........]  Swordmaster    -(XXXX)    [---------.]
+Fire Magic     F(XXXX)    [----------]  Stealth:       -(XXXX)    [----......]
+  Firebolt              X [----------]
+  Phoenix Weapon        2 [*---------]
+Summoning      F(XXXX)    [----------]
+  Salamander            1 [---MAX----]
+  Undine                2 [*---------]
 [ Pools ]--------------------------------------------------------[ Languages ]
 Action:    [                         ]  Common         A(XXXX)    [---MAX----]
 Ego:       [                         ]
@@ -30,3 +37,7 @@ Health is: Red (Any shade pleasing.)
 Fatigue is: Green (Any shade pleasing.)
 Ego is any color that you deem pleasing.
 The [---MAX----] is shown only when the skill can not learn more levels.
+The [*---------] indicates the number of mastery points applied to the technique. 
+The X on the technique line indicates Rank. Maybe 0 for unmastered spells or 1 for mastered spells. 2+ is a mastery spells.
+
+
