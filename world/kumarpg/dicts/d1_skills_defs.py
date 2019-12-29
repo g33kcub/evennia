@@ -177,7 +177,7 @@ ice_magic_techniques = {
     "arcticbolt": types["tech_dict"],
     "snowstorm": types["tech_dict"],
     "blizzard weapon": types["tech_dict"],
-    "arctic snap": types["tech_dict"]: 
+    "arctic snap": types["tech_dict"]
 }
 
 holy_magic_techniques = {
