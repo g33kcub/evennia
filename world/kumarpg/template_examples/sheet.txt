@@ -6,10 +6,11 @@ Approval Status: Approved               Dungeon: Name of Dungeon (XXXX)
 [ Attributes ]------------------------------------------[ Derived Attributes ]
 Air:           F(XXXX)    [..........]  Force:         F(XXXX)    [..........]
 Earth:         F(XXXX)    [..........]  Focus:         F(XXXX)    [..........]
-Fire:          F(XXXX)    [..........]  Finesse:       F(XXXX)    [..........]
-Water:         F(XXXX)    [..........]  Speed:         5
-Void:          F(XXXX)    [..........]  Size:          Medium
-                                        Tech Points:   XXXX/XXXX
+ Bulletproof            X [---MAX----]  Finesse:       F(XXXX)    [..........]
+Fire:          F(XXXX)    [..........]  Speed:         5
+Water:         F(XXXX)    [..........]  Size:          Medium
+Void:          F(XXXX)    [..........]  Tech Points:   XXXX/XXXX
+ Mana Rush              3 [**--------]                                
 [ Skills ]-------------------------------------------------------[ Abilities ]
 Swords:        F(XXXX)    [..........]  Night Sight    F(XXXX)    [..........]
   Heavy Swing           X [..........]  Swordmaster    -(XXXX)    [---------.]
