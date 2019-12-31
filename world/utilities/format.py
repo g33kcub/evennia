@@ -11,16 +11,16 @@ def header(string, fill="|113-|n", length="78", lframe="|113[|n", rframe="|113]|
     else: return fill * str_len + lframe + string + rframe + fill * offset +  "\n" 
 
 
-def wrap(string="", width=78):
+def wrap(string="", width=78, indent=0, fill=" "):
     "Wrao a string to fit a specified width"
     str_list = string.split()
     
-    output = ""
+    output = fill * indent
     line = ""
     for w in str_list:
-        if len(w + line) >= width:
+        if len(w + line) >= width - indent:
             output += ("%s\n" % line).lstrip()
-            line = "%s " % w
+            line = "|n" + fill * indent + "%s " % w
         else:
             line += "%s " % w
     output += line

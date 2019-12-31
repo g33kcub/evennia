@@ -1,11 +1,12 @@
 from commands.command import Command
 from evennia import CmdSet
 from evennia.utils.evmenu import EvMenu
-from world.kumarpg.chargen  import menu
+from world.kumarpg.chargen import chargen_general
 from world.kumarpg.dungeon1.dungeon1stats import dungeon1_stats
 from world.kumarpg.dungeon1.dungeon1demographics import dungeon1_demographics
 from world.kumarpg.universal.generalstats import universal_stats
 from world.kumarpg.universal.generaldemographics import universal_demographics
+from world.utilities.format import header
 
 _DUNGEON = "dungeon1"
 
@@ -23,7 +24,7 @@ class CmdChargen(Command):
     """
 
     key = "chargen"
-    alias = ["chargen", "cg"]
+    aliases = ["cgen", "cg"]
     help_category = "general"
 
     def func(self):
@@ -38,7 +39,16 @@ class CmdChargen(Command):
             dungeon1_stats(self.caller)
             dungeon1_demographics(self.caller)
 
-        EvMenu(self.caller, menu, "node_start")
+        CgMenu(self.caller, chargen_general, "node_start")
+
+
+class CgMenu(EvMenu):
+    def node_formatter(self, nodetext, optionstext):
+        output = nodetext + "\n\n"
+        output += header("|w Options |n", fill="|113-|n") + "\n"
+        output += optionstext + "\n\n"
+        output += header(" Type '|wQUIT|n' to quit. ", just="right", fill="|113=|n")
+        return output
 
 
 class CmdsetChargen(CmdSet):
