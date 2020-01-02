@@ -105,11 +105,11 @@ GAME_INDEX_LISTING = {
     "game_status": "pre-alpha",  # pre-alpha, alpha, beta or launched
     "short_description": GAME_SLOGAN,
     "long_description": "We are an isekai anime themed game with mud aspects and social roleplay aspects.",
-    "listing_contact": "g33kcub@gmail.com",  # email
+    "listing_contact": "staff@omoidemush.com",  # email
     "telnet_hostname": "",  # mygame.com
     "telnet_port": "",  # 1234
-    "game_website": "",  # http://mygame.com
-    "web_client_url": "",  # http://mygame.com/webclient
+    "game_website": "http://omoidemush.com",  # http://mygame.com
+    "web_client_url": "http://omoidemush.com/webclient",  # http://mygame.com/webclient
 }
 
 # Different Multisession modes allow a player (=account) to connect to the
