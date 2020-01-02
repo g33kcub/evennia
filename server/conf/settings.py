@@ -83,7 +83,6 @@ HELP_MORE = False
 # lock functions, which accepts both plural and singular (Admin & Admins)
 PERMISSION_HIERARCHY = [
     "Guest",  # note-only used if GUEST_ENABLED=True
-    "Newbie",
     "Player",
     "Helper",
     "Builder",
@@ -92,7 +91,7 @@ PERMISSION_HIERARCHY = [
     "Developer"
 ]
 # The default permission given to all new accounts
-PERMISSION_ACCOUNT_DEFAULT = "Newbie"
+PERMISSION_ACCOUNT_DEFAULT = "Player"
 TIME_ZONE = "EST"
 GAME_SLOGAN = "Chapter 1: Into the Darkness"
 
