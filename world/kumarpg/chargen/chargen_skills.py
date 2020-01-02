@@ -32,11 +32,11 @@ def node_skills(caller):
     options = []
     _skill_list = sorted(skills.keys())
 
-    for skill in _skill_list:
+    for skill in map(lambda x: cap_str(x), _skill_list):
         if skill not in cg["d1_skills"] and _skill_pool(caller, skill) >= 0:
             options.append({
-              "desc": skill,
-              "goto": (_set_skill, {"skill": skill.lower()})
+                "desc": skill,
+                "goto": (_set_skill, {"skill": skill.lower()})
             })
 
     if len(options) == 0:
@@ -57,34 +57,29 @@ def node_skills(caller):
         text = wrap(text, indent=1)
         text += "\n\n|w Current Skills:\n|n "
         text += "\n|n ".join(list_skills)
-        return cgen_header("Skills") + text, options
+
+    return cgen_header("Skills") + text, options
 
 
 def _reset_skills(caller):
     cg = pregen.PREGEN_DUNGEON_1[caller.ndb.pregen["pkg"]]
-    caller.db.skills = skills
+    caller.db.d1_skills = skills
 
     for skill in skills:
         try:
-            caller.db.skills[skill]["rank"] = cg["skills"][skill]["rank"]
-            caller.db.skills[skill]["lxpl"] = cg["skills"][skill]["lxpl"]
+            caller.db.d1_skills[skill]["rank"] = cg["d1_skills"][skill]["rank"]
+            caller.db.d1_skills[skill]["lxpl"] = cg["d1_skills"][skill]["lxpl"]
         except KeyError:
             pass
 
-    _skill_list = [skill for skill in cg["skills"] if skill in skills]
+    _skill_list = [skill for skill in cg["d1_skills"] if skill in skills]
     caller.ndb.pregen["skills"] = _skills[caller.db.cls] - len(_skill_list)
 
 
 def _set_skill(caller, _, **kwargs):
     """ Set a skill and do the associated bookkeeping """
     pool = _skill_pool(caller, kwargs.get("skill"))
-    if pool < 0:
-        # Not enough skill points left! Send them to the secondary
-        # skills node with the reject message and the remaining skills
-        # list.
-        return "node_skills_2"
-    else:
-        caller.db.skills[kwargs.get("skill")]["rank"] += 1
-        caller.ndb.pregen["skills"] = pool
-        if caller.ndb.pregen["skills"]:
-            return "node_skills"
+    caller.db.d1_skills[kwargs.get("skill")]["rank"] += 1
+    caller.ndb.pregen["skills"] = pool
+
+    return "node_skills"
