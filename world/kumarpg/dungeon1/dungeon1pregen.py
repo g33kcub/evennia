@@ -1,7 +1,7 @@
 """
-This file contains the pregenned stats for all the dungeon 1 characters. 
+This file contains the pregenned stats for all the dungeon 1 characters.
 There will be one for each race and each cls so a total of 21 total.
- 
+
 Human, Half-Elf, Elf, Pixie, Inojin, Nekojin & Dwarf
 Adventurer, Supporter & Citizen
 
@@ -497,13 +497,13 @@ PREGEN_DUNGEON_1 = {
             "silver": 500,
             "gold": 10
         },
-        "d1_skills": {
+        "d1_weapons": {
             "hammers": {
                 "rank": 1,
                 "lxpl": 300
             }
         },
-        "skills": {
+        "d1_skills": {
             "armor smith": {
                 "rank": 1,
                 "lxpl": 300
@@ -579,7 +579,7 @@ PREGEN_DUNGEON_1 = {
             "silver": 1500,
             "gold": 20
         },
-        "d1_skills": {
+        "d1_weapons": {
             "battle shields": {
                 "rank": 3,
                 "lxpl": 600
@@ -589,7 +589,7 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 500
             }
         },
-        "skills": {},
+        "d1_skills": {},
         "d1_abilities": {
             "night sight": {
                 "rank": 1,
@@ -655,7 +655,7 @@ PREGEN_DUNGEON_1 = {
             "silver": 500,
             "gold": 20
         },
-        "d1_skills": {
+        "d1_weapons": {
             "axes": {
                 "rank": 1,
                 "lxpl": 300
@@ -665,7 +665,7 @@ PREGEN_DUNGEON_1 = {
                 "lxpl": 300
             }
         },
-        "skills": {},
+        "d1_skills": {},
         "d1_abilities": {
             "night sight": {
                 "rank": 1,

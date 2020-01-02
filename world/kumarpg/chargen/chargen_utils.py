@@ -15,7 +15,7 @@ _skills = {
 
 
 def cgen_header(string):
-    return header("|540 Character Generation System|n - {} ".format(string), fill="|113=|n")
+    return header("|540 Character Generation System|n - |w{}|n ".format(string), fill="|113=|n")
 
 
 def _get_race_weapon(caller):
@@ -37,5 +37,5 @@ def _get_race_weapon(caller):
     if cg["race"].lower() == "inojin":
         caller.ndb.pregen["weapon"] = ["staves"]
 
-    _weapon_list = [weapon for weapon in cg["d1_skills"] if weapon in weapons]
+    _weapon_list = [weapon for weapon in cg["d1_weapons"] if weapon in weapons]
     return [weapon for weapon in _weapon_list if weapon not in caller.ndb.pregen["weapon"]]

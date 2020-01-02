@@ -1,9 +1,9 @@
-from world.kumarpg.dungeon1 import dungeon1pregen as pregen
-from world.kumarpg.dicts.d1_weapon_defs import weapons
-from world.kumarpg.dicts.skills_defs import skills
-from world.utilities.format import cap_str, wrap
-from world.kumarpg.chargen.chargen_utils import cgen_header, _skills, _weapons, _get_race_weapon
 from evennia.utils.utils import list_to_string
+
+from world.kumarpg.chargen.chargen_utils import cgen_header, _skills, _weapons, _get_race_weapon
+from world.kumarpg.dicts.d1_skills_defs import skills
+from world.kumarpg.dungeon1 import dungeon1pregen as pregen
+from world.utilities.format import cap_str, wrap
 
 
 def _preview_package(caller, _, **kwargs):
@@ -27,7 +27,7 @@ def node_package(_):
           "desc": template,
           "goto": (_preview_package, {"pkg": template.lower()})
         })
-    hdr =cgen_header("Pregen Packages") + "\n\n"
+    hdr = cgen_header("Pregen Packages") + "\n\n"
     return hdr + text, options
 
 
@@ -37,12 +37,12 @@ def node_view_pregen(caller):
     weapon_count = _get_race_weapon(caller)
 
     try:
-        _skill_list = [skill for skill in cg["skills"] if skill in skills]
+        _skill_list = [skill for skill in cg["d1_skills"] if skill in skills]
     except KeyError:
         _skill_list = []
 
     # Dungeon specific skills and universal skills combined.
-    _total_skills = [cap_str(skill) for skill in cg["d1_skills"]] + [cap_str(skill) for skill in cg["skills"]]
+    _total_skills = [cap_str(skill) for skill in cg["d1_weapons"]] + [cap_str(skill) for skill in cg["d1_skills"]]
     _total_skills.sort()
 
     text = "|w Template:|n        {}".format(cg["key"]) + "\n"
@@ -98,10 +98,18 @@ def _set_template(caller):
     for curr in cg["currency"]:
         caller.db.currency[curr] = cg["currency"][curr]
 
-    # set stats
+    # set d1_stats
     for stat in cg["d1_stats"]:
         caller.db.d1_stats[stat]["rank"] = cg["d1_stats"][stat]["rank"]
         caller.db.d1_stats[stat]["lxpl"] = cg["d1_stats"][stat]["lxpl"]
+
+    # set d1_weapons
+    for skill in cg["d1_weapons"]:
+        try:
+            caller.db.d1_weapons[skill]["rank"] = cg["d1_weapons"][skill]["rank"]
+            caller.db.d1_weapons[skill]["lxpl"] = cg["d1_weapons"][skill]["lxpl"]
+        except KeyError:
+            pass
 
     # set d1_skills
     for skill in cg["d1_skills"]:
@@ -111,21 +119,14 @@ def _set_template(caller):
         except KeyError:
             pass
 
-    # set skills
-    for skill in cg["skills"]:
-        try:
-            caller.db.skills[skill]["rank"] = cg["skills"][skill]["rank"]
-            caller.db.skills[skill]["lxpl"] = cg["skills"][skill]["lxpl"]
-        except KeyError:
-            pass
     # Set Abilities
     for abil in cg["d1_abilities"]:
         caller.db.d1_abilities[abil]["rank"] = cg["d1_abilities"][abil]["rank"]
         caller.db.d1_abilities[abil]["lxpl"] = cg["d1_abilities"][abil]["lxpl"]
 
-    _skill_list = [skill for skill in cg["skills"] if skill in skills]
+    _skill_list = [skill for skill in cg["d1_skills"] if skill in skills]
     caller.ndb.pregen["skills"] = _skills[caller.db.cls] - len(_skill_list)
 
     caller.ndb.pregen["weapons"] = _weapons[caller.db.cls] - len(_get_race_weapon(caller))
-
+    caller.ndb.pregen["next"] = "node_weapons"
     return "node_weapons"

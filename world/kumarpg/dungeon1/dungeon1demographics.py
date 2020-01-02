@@ -1,9 +1,9 @@
-from evennia import DefaultCharacter
 """
 This is the demographics file for Dungeon 1.
 Races:
 Human, Elf, Pixie, Dwarf, Inojin, Nekojin, Half-Elf
 """
+
 
 def dungeon1_demographics(character):
     character.db.d1_rpgclass = "Citizen"
@@ -23,4 +23,3 @@ def dungeon1_demographics(character):
     """
     character.db.d1_milestones = {}
 
- 
