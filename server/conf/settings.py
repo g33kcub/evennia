@@ -104,10 +104,11 @@ GAME_INDEX_LISTING = {
     "game_name": SERVERNAME,
     "game_status": "pre-alpha",  # pre-alpha, alpha, beta or launched
     "short_description": GAME_SLOGAN,
-    "long_description": "Welcome to Inaria, a world where sword and sorcery are not only alive and well, but a way of life. In our world, magic flows freely. Up until recently, the world was a relatively peaceful place, all things considered. In the last few years a dungeon has mysteriously appeared in the kingdom of Arthen and with it came monsters. We are an Isekai genre game, heavily influenced by JRPGs, Danmachi, Sword Art Online and many others. In our game you will take on the role of one of three basic classes and journey through the world.\
-        Will you be a courageous hero?\
-        Will you be a master crafter?\
-        Or...\
+    "long_description": "Welcome to Inaria, a world where sword and sorcery are not only alive and well, but a way of life. In our world, magic flows freely. Up until recently, the world was a relatively peaceful place, all things considered. In the last few years a dungeon has mysteriously appeared in the kingdom of Arthen and with it came monsters. We are an Isekai genre game, heavily influenced by JRPGs, Danmachi, Sword Art Online and many others. In our game you will take on the role of one of three basic classes and journey through the world.
+
+        Will you be a courageous hero? 
+        Will you be a master crafter?
+        Or...
         Will you be something else?",
     "listing_contact": "staff@omoidemush.com",  # email
     "telnet_hostname": "",  # mygame.com
