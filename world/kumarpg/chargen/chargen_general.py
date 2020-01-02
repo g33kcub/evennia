@@ -3,6 +3,7 @@ from django.conf import settings
 from world.kumarpg.chargen.chargen_template import node_package, node_view_pregen, _set_template
 from world.kumarpg.chargen.chargen_weapons import node_weapons, _reset_weapons, _set_weapon
 from world.kumarpg.chargen.chargen_skills import node_skills, _reset_skills, _set_skill
+from world.kumarpg.chargen.chargen_equipment import node_equipment
 from world.kumarpg.chargen.chargen_utils import cgen_header
 
 

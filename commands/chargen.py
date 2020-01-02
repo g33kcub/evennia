@@ -45,8 +45,9 @@ class CmdChargen(Command):
 class CgMenu(EvMenu):
     def node_formatter(self, nodetext, optionstext):
         output = nodetext + "\n\n"
-        output += header("|w Options |n", fill="|113-|n") + "\n"
-        output += optionstext + "\n\n"
+        if optionstext:
+            output += header("|w Options |n", fill="|113-|n") + "\n"
+            output += optionstext + "\n\n"
         output += header(" Type '|wQUIT|n' to quit. ", just="right", fill="|113=|n")
         return output
 
