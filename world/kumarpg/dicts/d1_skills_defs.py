@@ -1,7 +1,6 @@
 from world.kumarpg.dicts.types_defs import types
 
 skills = {
-    "skill": types["skill_dict"],
     "persuasion": types["skill_dict_social"],
     "haggling": types["skill_dict_social"],
     "intimidation": types["skill_dict_social"],
@@ -31,7 +30,24 @@ skills = {
     "culinarian": types["skill_dict_crafting5"],
     "appraisal": types["skill_dict_tradesman"],
     "research": types["skill_dict_tradesman"],
-    "survival": types["skill_dict_tradesman"]
+    "survival": types["skill_dict_tradesman"],
+    "fire magic": types["magic_dict"],
+    "water magic": types["magic_dict"],
+    "air magic": types["magic_dict"],
+    "earth magic": types["magic_dict"],
+    "shadow magic": types["magic_dict"],
+    "holy magic": types["magic_dict"],
+    "lightning magic": types["magic_dict"],
+    "ice magic": types["magic_dict"],
+    "mana magic": types["magic_dict"],
+    "abjuration": types["magic_dict"],
+    "healing magic": types["magic_dict"],
+    "time magic": types["magic_dict"],
+    "chaos magic": types["magic_dict"],
+    "status magic": types["magic_dict"],
+    "summoning": types["magic_dict"],
+    "poison magic": types["magic_dict"]
+
 }
 
 persuasion_techniques = {

@@ -39,9 +39,8 @@ PREGEN_DUNGEON_1 = {
         "race": "nekojin",
         "cls": "citizen",
         "concept": "nekojin merchant",
-        "desc": "We can have a few lines worth of description for each of the pregen templates.  If it's going to \
-                be a long string you can break it up with a slash for mutiple lines to retain file readability!\
-                It won't do anything to the end formatting.",
+        "desc": "A beginning whiz on the frontier market of selling their wares. You are\
+            equally at home selling new and used items to any adventurer that is interested.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -113,6 +112,7 @@ PREGEN_DUNGEON_1 = {
         "race": "nekojin",
         "cls": "supporter",
         "concept": "nekojin druid",
+        "desc": "Walking the fine line between ferality and civility, you are in touch with nature's power to harm and heal.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -154,13 +154,23 @@ PREGEN_DUNGEON_1 = {
             "gold": 20
         },
         "d1_skills": {
-            "geobolt": {
+            "earth magic": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "geobolt": {
+                        "lxpl": 100
+                    }
+                }
             },
-            "liminal light": {
+            "healing magic": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "liminal energy": {
+                            "lxpl": 100
+                    }
+                }
             }
         },
         "d1_abilities": {
@@ -185,6 +195,7 @@ PREGEN_DUNGEON_1 = {
         "race": "nekojin",
         "cls": "adventurer",
         "concept": "nekojin dominator",
+        "desc": "There is power, then there is you. As quick witted and agile as the whip you use, you dominate the battle field with feline grace.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -248,6 +259,8 @@ PREGEN_DUNGEON_1 = {
         "race": "inojin",
         "cls": "citizen",
         "concept": "inojin cartographer",
+        "desc": "The dungeon does not map itself. You have taken upon the skills to craft maps to help save as many lives as you can.\
+            You have knowledge that few possess, yet all need.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -319,6 +332,8 @@ PREGEN_DUNGEON_1 = {
         "race": "inojin",
         "cls": "supporter",
         "concept": "inojin void stalker",
+        "desc": "You find a safe place within the shadows. You have learned to use their dark power as your own to\
+            imbue your weapons with the stuff of darkness itself.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -364,9 +379,14 @@ PREGEN_DUNGEON_1 = {
                 "rank": 1,
                 "lxpl": 300
             },
-            "shadow weapon": {
+            "shadow magic": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "shadow weapon": {
+                        "lxpl": 100
+                    }
+                }
             }
         },
         "d1_abilities": {
@@ -391,6 +411,7 @@ PREGEN_DUNGEON_1 = {
         "race": "inojin",
         "cls": "adventurer",
         "concept": "inojin alpha",
+        "desc": "The leader of the pack. You are the top dog and you let no one forget it. With your trusty staff at your side no one can stop you.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -455,7 +476,7 @@ PREGEN_DUNGEON_1 = {
         "race": "dwarf",
         "cls": "citizen",
         "concept": "a dwarven smith",
-        "desc": "This is a sample description to be switched out later",
+        "desc": "A master-in-training at the forge, you are the epitome of the Dwarven legends.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -535,9 +556,8 @@ PREGEN_DUNGEON_1 = {
         "race": "dwarf",
         "cls": "supporter",
         "concept": "a dwarven sheild bearer",
-        "desc": "This is a temporary description to show what it looks like when the \
-                text wraps lines in both the menu and what it looks like to add/edit \
-                multiline text in the pregen file.",
+        "desc": "You are all that stands between those you protect and those wishing to harm them.\
+            With your shield that is designed to harm as well as protect you are force to reckon with.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -584,9 +604,14 @@ PREGEN_DUNGEON_1 = {
                 "rank": 3,
                 "lxpl": 600
             },
-            "defense up": {
+            "status magic": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "defense up": {
+                        "lxpl": 100
+                    }
+                }
             }
         },
         "d1_skills": {},
@@ -613,7 +638,7 @@ PREGEN_DUNGEON_1 = {
         "race": "dwarf",
         "cls": "adventurer",
         "concept": "a dwarven berserker",
-        "desc": "This is a temporary description until something cannon can be put into place!",
+        "desc": "Rage. Pure unadultered rage. On the battlefield you are a terrible sight to see.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -683,6 +708,7 @@ PREGEN_DUNGEON_1 = {
         "race": "pixie",
         "cls": "citizen",
         "concept": "pixie gatherer",
+        "desc": "You flit and float from one side of the field to another, gathering any and everything of value. Nothing escapes your keen eye.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -755,6 +781,7 @@ PREGEN_DUNGEON_1 = {
         "race": "pixie",
         "cls": "supporter",
         "concept": "pixie trickster",
+        "desc": "You are never seen until it is too late. You play all kinds of tricks on those around you. Nothing is better than a good laugh with friends, at friends.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -801,7 +828,7 @@ PREGEN_DUNGEON_1 = {
                 "rank": 1,
                 "lxpl": 300
             },
-            "stealth": {
+            "survival": {
                 "rank": 1,
                 "lxpl": 300
             }
@@ -827,6 +854,7 @@ PREGEN_DUNGEON_1 = {
     "pixie dagger dancer": {
         "race": "pixie",
         "cls": "adventurer",
+        "desc": "You might be small, but with a dagger or any knife, you are a hurricane of death and destruction -- few survive to tell stories.",
         "concept": "pixie dagger dancer",
         "languages": {
             "common": {
@@ -892,6 +920,7 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "citizen",
         "concept": "half-elf beastmaster",
+        "desc": "You have spent your life learning how to raise, train and breed the perfect companion beast.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -967,6 +996,7 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "supporter",
         "concept": "half-elf scout",
+        "desc": "Keen eyesight, trusty bow, and quick wits are all you need. You keep an eye on the trail ahead and what the enemy is doing before they get to close.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1039,6 +1069,7 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "adventurer",
         "concept": "half-elf archer",
+        "desc": "You have embraced your Elven heritage more-so than your human side. You have taken up the bow with a furver of your Elven lineage.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1102,6 +1133,8 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "adventurer",
         "concept": "elven swordsman",
+        "desc": "Hundreds of years of mastery is shown through your movements -- You may still be new, by Elven standards, but the truth of your skill is shown.\
+            You are force to be reckoned with, with any blade in your hand.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1165,6 +1198,7 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "supporter",
         "concept": "elven priest",
+        "desc": "Faith is a powerful weapon. You are one of the Holy Priests of the Elves. You are still a young Acolyte, but you've decided to use your skills and faith to protect those within the dungeon.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1210,9 +1244,14 @@ PREGEN_DUNGEON_1 = {
                 "rank": 1,
                 "lxpl": 300
             },
-            "healing energy": {
+            "healing magic": {
                 "rank": 3,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "healing energy": {
+                        "lxpl": 100
+                    }
+                }
             },
         },
         "d1_abilities": {
@@ -1237,6 +1276,7 @@ PREGEN_DUNGEON_1 = {
         "race": "elf",
         "cls": "citizen",
         "concept": "elven enchanter",
+        "desc": "You have learned the fine art of imbuing the mundane with the arcane. Your skills are still being honed, but your promise is high.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1308,6 +1348,7 @@ PREGEN_DUNGEON_1 = {
         "race": "human",
         "cls": "adventurer",
         "concept": "human warrior",
+        "desc": "You have taken up sword and spear to head into the dungeon and fight to the end of the dungeon. You are a master in training with a weapon and fight tactics.",
         "languages": {
             "common": {
                 "rank": 5,
@@ -1371,6 +1412,7 @@ PREGEN_DUNGEON_1 = {
         "race": "human",
         "cls": "supporter",
         "concept": "human paladin",
+        "desc": "You have taken both martial prowess and faith as your weapons."
         "languages": {
             "common": {
                 "rank": 5,
@@ -1413,9 +1455,14 @@ PREGEN_DUNGEON_1 = {
                 "rank": 1,
                 "lxpl": 300
             },
-            "gleaming weapon": {
+            "holy magic": {
                 "rank": 1,
-                "lxpl": 500
+                "lxpl": 500,
+                "tech": {
+                    "gleaming weapon": {
+                        "lxpl": 100
+                    }
+                }
             }
         },
         "d1_abilities": {
@@ -1439,6 +1486,7 @@ PREGEN_DUNGEON_1 = {
         "race": "human",
         "cls": "citizen",
         "concept": "human guild associate",
+        "desc": "You aren't an adventurer, you're their help desk. You help them figure out how to and when to. You make it your point to study the dungeon, from a purely academic standpoint, of course.",
         "languages": {
             "common": {
                 "rank": 5,
