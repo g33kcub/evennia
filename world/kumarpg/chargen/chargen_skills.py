@@ -9,11 +9,9 @@ def _build_skill(skill, rank, length=22):
     return trail(cap_str(skill), length=length, delim=".") + "|w{}|n".format(RANKS["%s" % rank])
 
 
-def _skill_pool(caller, skill, rank=1):
-    skill = skill.lower()
-    starting_rank = caller.db.d1_skills[skill]["rank"]
+def _skill_pool(caller, rank=1):
 
-    return caller.ndb.pregen["skills"] - (starting_rank + rank)
+    return caller.ndb.pregen["skills"] - rank
 
 
 def node_skills(caller):
@@ -33,7 +31,7 @@ def node_skills(caller):
     _skill_list = sorted(skills.keys())
 
     for skill in map(lambda x: cap_str(x), _skill_list):
-        if skill not in cg["d1_skills"] and _skill_pool(caller, skill) >= 0:
+        if skill not in cg["d1_skills"] and _skill_pool(caller) >= 0:
             options.append({
                 "desc": skill,
                 "goto": (_set_skill, {"skill": skill.lower()})

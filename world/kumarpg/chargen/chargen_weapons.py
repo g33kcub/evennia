@@ -22,7 +22,7 @@ def node_weapons(caller):
     _skill_list = sorted(weapons.keys())
 
     for weapon in map(lambda x: cap_str(x), _skill_list):
-        if weapon not in cg["d1_weapons"] and _weapon_pool(caller, weapon) >= 0:
+        if weapon not in cg["d1_weapons"] and _weapon_pool(caller) >= 0:
             options.append({
               "desc": weapon,
               "goto": (_set_weapon, {"weapon": weapon.lower()})
@@ -50,11 +50,8 @@ def node_weapons(caller):
     return cgen_header("Weapons") + text, options
 
 
-def _weapon_pool(caller, weapon, rank=1):
-    weapon = weapon.lower()
-    starting_rank = caller.db.d1_weapons[weapon]["rank"]
-
-    return caller.ndb.pregen["weapons"] - (starting_rank + rank)
+def _weapon_pool(caller, rank=1):
+    return caller.ndb.pregen["weapons"] - rank
 
 
 def _reset_weapons(caller):
